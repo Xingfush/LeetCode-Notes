@@ -9,7 +9,7 @@
 def CeilIndex(A,l,r,key):
 
     while (r-l>1):
-        m=l+(r-1)//2
+        m=l+(r-l)//2
         if (A[m]>=key):
             r=m
         else:
@@ -18,23 +18,31 @@ def CeilIndex(A,l,r,key):
 
 def LongestIncreasingSubsequenceLength(A,size):
     tailTable=[0 for i in range(size+1)] # 使用任意元素初始化List，不用Numpy
+    Record=[[] for i in range(size+1)]
     len=0
 
     tailTable[0]=A[0]
+    Record[0]=[A[0]]
     len=1
     for i in range(1,size):
         if (A[i]<tailTable[0]):
             tailTable[0]=A[i]
+            Record[0]=[A[i]]
         elif (A[i]>tailTable[len-1]):
             tailTable[len]=A[i]
+            Record[len]=Record[len-1][:]
+            Record[len].append(A[i])
             len+=1
         else:
-            tailTable[CeilIndex(tailTable,-1,len-1,A[i])]=A[i]
+            j=CeilIndex(tailTable,-1,len-1,A[i])
+            tailTable[j]=A[i]
+            Record[j]=Record[j][:]
+            Record[j][-1]=A[i]
 
-    return len
+    return Record[len-1]
 
 if __name__ == '__main__':
     A=[2,5,3,7,11,8,10,13,6]
     n=len(A)
 
-    print("Length of Longest Increasing Subsequence is ",LongestIncreasingSubsequenceLength(A,n))
+    print("Length of Longest Increasing Subsequence is: ",LongestIncreasingSubsequenceLength(A,n))
