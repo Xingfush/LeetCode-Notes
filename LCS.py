@@ -1,8 +1,5 @@
-#
-
 # Problem 1: Longest Increasing Subsequence Size (NlogN)
-# Solution One: N^2 brute force
-# Solution Two: Dynamic Programming
+# Solution 1: Dynamic Programming
 # How to add or replace an element in the existing sequence. Each new smallest element in the array can be
 # a potential candidate to start new sequence,so we must maintain lists of increasing sequences and update.
 # 使用二分法查找新的A[i]在数组tailTable中的位置，有序数组查找使用二分查找

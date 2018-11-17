@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="Some practices for divide-and-conquer">
+    <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="remote test!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Heap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Heap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LCS.py" beforeDir="false" afterPath="$PROJECT_DIR$/LCS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RECURSIVE.py" beforeDir="false" afterPath="$PROJECT_DIR$/RECURSIVE.py" afterDir="false" />
     </list>
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LCS.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LCS.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LCS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="975">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -27,17 +28,17 @@
       <file leaf-file-name="Heap.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Heap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="25">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RECURSIVE.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RECURSIVE.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="1875">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
@@ -62,8 +63,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LCS.py" />
         <option value="$PROJECT_DIR$/RECURSIVE.py" />
+        <option value="$PROJECT_DIR$/Heap.py" />
+        <option value="$PROJECT_DIR$/LCS.py" />
       </list>
     </option>
   </component>
@@ -175,7 +177,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542438257025</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Some practices for divide-and-conquer">
+      <created>1542441066102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542441066102</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remote test!">
+      <created>1542441425820</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542441425820</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -185,9 +201,9 @@
       <window_info content_ui="combo" id="Project" order="1" weight="0.17001675" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3293348" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="3" visible="true" weight="0.23664123" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.20065431" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.217012" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.217012" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -220,6 +236,32 @@
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.3293348" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -227,7 +269,8 @@
     <MESSAGE value="Longest Increasing Sequence Done." />
     <MESSAGE value="Reconstruction Done!" />
     <MESSAGE value="Some practices for divide-and-conquer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some practices for divide-and-conquer" />
+    <MESSAGE value="remote test!" />
+    <option name="LAST_COMMIT_MESSAGE" value="remote test!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -251,22 +294,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Heap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LCS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="25">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="1875">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LCS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
