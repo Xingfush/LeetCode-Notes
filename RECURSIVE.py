@@ -17,6 +17,7 @@ def MaxSubArray(array):
                 right=j
     return maxSum
 
+# remote test
 if __name__ == '__main__':
     A=[2,-5,3,7,-11,8,-10,-3,6]
     print("The max subarray is:",MaxSubArray(A))
