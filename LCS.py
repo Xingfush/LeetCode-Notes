@@ -1,6 +1,6 @@
 #
 
-# Item 1: Longest Increasing Subsequence Size (NlogN)
+# Problem 1: Longest Increasing Subsequence Size (NlogN)
 # Solution One: N^2 brute force
 # Solution Two: Dynamic Programming
 # How to add or replace an element in the existing sequence. Each new smallest element in the array can be
