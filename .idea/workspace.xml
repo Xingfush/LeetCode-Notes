@@ -17,8 +17,8 @@
       <file leaf-file-name="LCS.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LCS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="1097">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
             </state>
           </provider>
         </entry>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542469522415</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="binary search added.">
+      <created>1542551125685</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542551125685</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -284,7 +291,8 @@
     <MESSAGE value="remote test!" />
     <MESSAGE value="Format Standardization." />
     <MESSAGE value="LIS completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="LIS completed." />
+    <MESSAGE value="binary search added." />
+    <option name="LAST_COMMIT_MESSAGE" value="binary search added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -343,8 +351,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LCS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="1097">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
         </state>
       </provider>
     </entry>

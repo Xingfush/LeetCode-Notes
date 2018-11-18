@@ -90,6 +90,26 @@ def PrintLCS(x,y,c):
     print("Longest Common Subsequence is:" ,list(reversed(s)))
 
 
+# Problem 3: edit distance of converting str1 to str2
+def editDistance(str1,str2):
+    m=len(str1)
+    n=len(str2)
+    d=np.zeros((m+1,n+1))
+    for i in range(m+1):
+        d[i,0]=i
+    for j in range(n+1):
+        d[0,j]=j
+    for i in range(1,m+1):
+        for j in range(1,n+1):
+            if str1[i-1]==str2[j-1]:
+                d[i,j]=d[i-1,j-1]
+            else:
+                d[i,j]=1+min(d[i-1,j-1],d[i-1,j],d[i,j-1])
+
+    return int(d[m,n])
+
+
+
 def BianrySearch(key,A):
     l,r=0,len(A)
     while r-l>=2: # 等价于r!=l，区别于r>=l
@@ -115,10 +135,11 @@ def lower_bound(array,value):
 
 
 if __name__ == '__main__':
-    X='ABZCVDOWE'
-    Y='AHBUCDOEGF'
+    X='saturdaywendy'
+    Y='sundayandy'
     A=[1, 3, 5, 7 ,9 ,11 ,13, 15, 17, 19, 20]
     B=[2,5]
     #print("Length of Longest Common Subsequence is: ",LongestIncreaseSequence(A))
     #PrintLCS(X,Y,LongestCommonSequence(X,Y))
-    print("The key is in a region:",lower_bound(B,5))
+    #print("The key is in a region:",lower_bound(B,5))
+    print("the edit distance between str1 and str2 is:",editDistance(X,Y))
