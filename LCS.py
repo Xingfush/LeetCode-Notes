@@ -90,9 +90,35 @@ def PrintLCS(x,y,c):
     print("Longest Common Subsequence is:" ,list(reversed(s)))
 
 
+def BianrySearch(key,A):
+    l,r=0,len(A)
+    while r-l>=2: # 等价于r!=l，区别于r>=l
+        m=(l+r)//2
+        if key<=A[m]: # A[r-1]<key<=A[r]
+            r=m
+        else: # A[m]<key==A[l-1]<key, r=l
+            l=m
+    return r
+
+def lower_bound(array,value):
+    first,last=0,len(array)
+    while first<last:
+        mid=first+(last-first)//2
+        if array[mid]==value:
+            return mid
+        elif array[mid]<value:
+            first=mid+1
+        else:
+            last=mid
+
+    return -1
+
+
 if __name__ == '__main__':
     X='ABZCVDOWE'
     Y='AHBUCDOEGF'
-    A=[1, 2, 3, 4 ,2 ,3 ,12, 4, 5, 56, 3, 2, 2,12,34,35,45,57,102,214,112]
-    print("Length of Longest Common Subsequence is: ",LongestIncreaseSequence(A))
+    A=[1, 3, 5, 7 ,9 ,11 ,13, 15, 17, 19, 20]
+    B=[2,5]
+    #print("Length of Longest Common Subsequence is: ",LongestIncreaseSequence(A))
     #PrintLCS(X,Y,LongestCommonSequence(X,Y))
+    print("The key is in a region:",lower_bound(B,5))
