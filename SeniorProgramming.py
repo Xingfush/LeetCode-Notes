@@ -185,7 +185,6 @@ class G:
     def spam(self):
         pass
 
-
 # super()：用来调用父类的方法
 # 在Python3中，super()的调用方法由super(Child,self).method简化为了super().method
 class FooParent():
