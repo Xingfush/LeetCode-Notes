@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="two equal subsets partition added.">
-      <change afterPath="$PROJECT_DIR$/SeniorProgramming.py" afterDir="false" />
+    <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeniorProgramming.py" beforeDir="false" afterPath="$PROJECT_DIR$/SeniorProgramming.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/LCS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="350">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -26,8 +26,11 @@
       <file leaf-file-name="SeniorProgramming.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SeniorProgramming.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="366">
+              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+              <folding>
+                <element signature="e#203#217#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -255,11 +258,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542641974812</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Senior programming decorator added.">
+      <created>1542700936893</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542700936893</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="800" y="0" width="1232" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="1" weight="0.17001675" />
@@ -267,7 +277,7 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.23898679" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.19713657" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.23991276" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.23898679" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -283,21 +293,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17001675" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3293348" />
       <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32929516" />
-      <window_info anchor="bottom" id="Python Console" order="0" weight="0.3293348" />
-      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3293348" />
       <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Python Console" order="0" weight="0.3293348" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -339,7 +349,8 @@
     <MESSAGE value="binary search added." />
     <MESSAGE value="edit distance added." />
     <MESSAGE value="two equal subsets partition added." />
-    <option name="LAST_COMMIT_MESSAGE" value="two equal subsets partition added." />
+    <MESSAGE value="Senior programming decorator added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Senior programming decorator added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -347,6 +358,37 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/LCS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeniorProgramming.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#203#217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LCS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3350">
@@ -441,14 +483,17 @@
     <entry file="file://$PROJECT_DIR$/LCS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SeniorProgramming.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="366">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+          <folding>
+            <element signature="e#203#217#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
