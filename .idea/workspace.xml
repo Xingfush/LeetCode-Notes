@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/PythonClass.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonFunc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SeniorProgramming.py" beforeDir="false" afterPath="$PROJECT_DIR$/SeniorProgramming.py" afterDir="false" />
     </list>
@@ -23,16 +25,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeniorProgramming.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SeniorProgramming.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SeniorProgramming.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+            <state relative-caret-position="191">
+              <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
               <folding>
                 <element signature="e#203#217#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PythonClass.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonClass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PythonFunc.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PythonFunc.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Heap.py" pinned="false" current-in-tab="false">
@@ -47,7 +63,7 @@
       <file leaf-file-name="RECURSIVE.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
+            <state relative-caret-position="600">
               <caret line="75" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
@@ -68,6 +84,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Heap.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/LCS.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/PythonClass.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/RECURSIVE.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/SeniorProgramming.py" root0="SKIP_INSPECTION" />
   </component>
@@ -78,11 +95,13 @@
         <option value="$PROJECT_DIR$/Heap.py" />
         <option value="$PROJECT_DIR$/LCS.py" />
         <option value="$PROJECT_DIR$/SeniorProgramming.py" />
+        <option value="$PROJECT_DIR$/PythonClass.py" />
+        <option value="$PROJECT_DIR$/PythonFunc.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="800" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="751" />
     <option name="width" value="1232" />
     <option name="height" value="1047" />
   </component>
@@ -109,7 +128,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SeniorProgramming">
+  <component name="RunManager" selected="Python.PythonClass">
     <configuration name="LCS" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,6 +142,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LCS.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="PythonClass" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonClass.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,9 +205,11 @@
       <item itemvalue="Python.LCS" />
       <item itemvalue="Python.RECURSIVE" />
       <item itemvalue="Python.SeniorProgramming" />
+      <item itemvalue="Python.PythonClass" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PythonClass" />
         <item itemvalue="Python.SeniorProgramming" />
         <item itemvalue="Python.LCS" />
         <item itemvalue="Python.RECURSIVE" />
@@ -265,11 +304,25 @@
       <option name="project" value="LOCAL" />
       <updated>1542700936893</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Class decorator added.">
+      <created>1542773009735</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1542773009736</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Class decorator finished.">
+      <created>1542788496396</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1542788496396</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="800" y="0" width="1232" height="1047" extended-state="0" />
+    <frame x="751" y="0" width="1232" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="1" weight="0.17001675" />
@@ -350,7 +403,9 @@
     <MESSAGE value="edit distance added." />
     <MESSAGE value="two equal subsets partition added." />
     <MESSAGE value="Senior programming decorator added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Senior programming decorator added." />
+    <MESSAGE value="Class decorator added." />
+    <MESSAGE value="Class decorator finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Class decorator finished." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -466,9 +521,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LCS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
+        <state relative-caret-position="600">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
@@ -480,22 +542,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LCS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SeniorProgramming.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+        <state relative-caret-position="191">
+          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
           <folding>
             <element signature="e#203#217#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFunc.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
