@@ -13,7 +13,8 @@ import logging
 #
 #     return wrapper # 返回改造后的函数
 
-# 接受输入参数的装饰器函数
+# 装饰器为被包装函数增加参数，接受输入参数的装饰器函数
+# Form One:
 from functools import wraps
 def use_logging(level):
     def decorator(func):
@@ -36,6 +37,18 @@ def bar():
 def foo():
     print("I am a foo.")
 
+# Form Two:
+def optional_debug(func):
+    @wraps(func)
+    def wrapper(*args,debug=False,**kwargs):
+        if debug:
+            print('Calling',func.__name__)
+        return func(*args,**kwargs)
+    return wrapper
+
+@optional_debug
+def spam(a,b,c):
+    print(a,b,c)
 
 # -------------------------------------------------------------------------------------------------------------------
 # Class: 有关类的知识
@@ -82,15 +95,15 @@ class C():
             return func(*args,**kwargs)
         return wrapper
 
-a=A()
-# As an instance method
-@a.decorator1
-def spam():
-    pass
-# As a class method
-@A.decorator2
-def grok():
-    pass
+# c=C()
+# # As an instance method
+# @c.decorator1
+# def spam():
+#     pass
+# # As a class method
+# @C.decorator2
+# def grok():
+#     pass
 
 # 在类中定义装饰器在标准库中很常见，例如@property装饰器就是一个类，里面定义了三个方法，每个方法都是装饰器
 # getter(),setter(),deleter()
@@ -151,6 +164,27 @@ class Spam:
 
 # 三.为类和静态方法提供装饰器，很简单，但要保证装饰器在@classmethod和@staticmethod之后
 
+# 四.使用装饰器扩充类的功能，即装饰器的输入为class，not function，输出为class
+# 使用场景，重写了类定义的某部分来修改行为，但是又不希望使用继承或者元类
+# 重写一个特殊方法__getattribute__的类装饰器，可以打印日志
+def log_getattribute(cls):
+    # 1.Get the original implementation
+    orig_getattribute=cls.__getattribute__
+    # 2.Make a new definition
+    def new_getattribute(self,name):
+        print('getting:',name)
+        return orig_getattribute(self,name)
+    # 3.Attach to the class and return
+    cls.__getattribute__=new_getattribute
+    return cls
+
+@log_getattribute
+class G:
+    def __init__(self,x):
+        self.x=x
+    def spam(self):
+        pass
+
 
 # super()：用来调用父类的方法
 class FooParent():
@@ -194,10 +228,11 @@ if __name__=='__main__':
     # fooChild.bar('HelloWorld')
     # xInstance=X(1,2,3)
     # xInstance(1,2)
-    bar()
-    print(bar.__name__)
-    print(bar.__annotations__)
-
-#bar=use_logging(bar)
-# bar()
-# foo()
+    # bar()
+    # print(bar.__name__)
+    # print(bar.__annotations__)
+    # spam(1,2,3)
+    #  spam(1,2,3,debug=True)
+    g=G(42)
+    g.x
+    g.spam()
