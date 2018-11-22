@@ -1,4 +1,4 @@
-# This file is recorded for Python Function.
+jnn# This file is recorded for Python Function.
 
 # 一.接受任意参数的函数，*args传入函数后args是元组，**kwargs传入后是字典
 # 后面仍然定义其他参数，即强制关键字参数
