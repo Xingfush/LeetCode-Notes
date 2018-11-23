@@ -108,10 +108,45 @@ def diffWaysToCompute2(input):
 # 多级的for循环在列表推导式里是相乘的
 
 
+def InsertSort(nums):
+    for i in range(1,len(nums)):
+        key=nums[i]
+        j=i-1
+        while j>=0 and nums[j]>key:
+            nums[j+1]=nums[j]
+            j-=1
+        nums[j+1]=key
+    return nums
+
+def Merge(A,B):
+    C=[]
+    cur_1,cur_2=0,0
+    while cur_1<len(A) and cur_2<len(B):
+        if A[cur_1]<B[cur_2]:
+            C.append(A[cur_1])
+            cur_1+=1
+        else:
+            C.append(B[cur_2])
+            cur_2+=1
+    C.extend(A[cur_1:])
+    C.extend(B[cur_2:])
+    return C
+
+def MergeSort(nums):
+    if len(nums)<2:
+        return nums
+    else:
+        mid=len(nums)//2
+        A=MergeSort(nums[:mid])
+        B=MergeSort(nums[mid:])
+        return Merge(A,B)
+
 
 
 if __name__ == '__main__':
-    # A=[2,-5,3,7,-11,8,-10,-3,6]
+    A=[2,-5,3,7,-11,8,-10,-3,6,89,80,3,4]
+    r=[1,3,5,7,9]
+    s=[2,4,6,8,10,11,12,13]
     opstr='2*3-4*5'
-    # print("The max subarray is:",MaxSubArray(A))
-    print('All values of different ways to compute are:',diffWaysToCompute(opstr))
+    print("The max subarray is:",MergeSort(A))
+    # print('All values of different ways to compute are:',diffWaysToCompute(opstr))
