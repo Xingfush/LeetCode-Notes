@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Queue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stack.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RECURSIVE.py" beforeDir="false" afterPath="$PROJECT_DIR$/RECURSIVE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,7 +74,7 @@
       <file leaf-file-name="Stack.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Stack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="500">
               <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
@@ -85,8 +83,8 @@
       <file leaf-file-name="Queue.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Queue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="25">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -128,8 +126,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="840" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="614" />
     <option name="width" value="1232" />
     <option name="height" value="1047" />
   </component>
@@ -157,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Stack">
+  <component name="RunManager" selected="Python.Queue">
     <configuration name="Heap" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,7 +174,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="PythonClass" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Queue" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,7 +186,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonClass.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Queue.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -249,19 +247,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.PythonClass" />
       <item itemvalue="Python.Heap" />
       <item itemvalue="Python.Sorting" />
       <item itemvalue="Python.RECURSIVE" />
       <item itemvalue="Python.Stack" />
+      <item itemvalue="Python.Queue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Queue" />
         <item itemvalue="Python.Stack" />
         <item itemvalue="Python.RECURSIVE" />
         <item itemvalue="Python.Sorting" />
         <item itemvalue="Python.Heap" />
-        <item itemvalue="Python.PythonClass" />
       </list>
     </recent_temporary>
   </component>
@@ -409,11 +407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542988055565</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Stack and Queue in Python added.">
+      <created>1543066053712</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1543066053712</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="614" y="0" width="1232" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="1" weight="0.17001675" />
@@ -421,7 +426,7 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.23898679" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.19713657" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.23336968" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.23568282" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -502,7 +507,8 @@
     <MESSAGE value="Python function added." />
     <MESSAGE value="diffWaysToCompute added." />
     <MESSAGE value="Merge sorting added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge sorting added." />
+    <MESSAGE value="Stack and Queue in Python added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Stack and Queue in Python added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -718,15 +724,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="500">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Queue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="25">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
