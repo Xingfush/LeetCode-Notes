@@ -225,6 +225,69 @@ class LinkedDeque(_DoublyLinkedBase):
         return self._delete_node(self._trailer._prev)
 
 
+# Positional List ADT based on Double LinkedList
+class PositionalList(_DoublyLinkedBase):
+    """A sequential container of elements allowing positional access."""
+    # ----------------nested Postion class-----------------------
+    class Position:
+        """An abstraction representing the location of a single element."""
+        def __init__(self,container,node):
+            self._container=container
+            self._node=node
+
+        def element(self):
+            return self._node._element
+
+        def __eq__(self, other):
+            """Return True if other is a Position representing the same location."""
+            return type(other) is type(self) and other._node is self._node
+
+        def __ne__(self, other):
+            return not (self==other)
+
+
+    # ---------------utility method-------------------------------
+    def _validate(self,p):
+        """Return position'node, or raise appropriate error if invalid."""
+        if not isinstance(p,self.Position):
+            raise TypeError('p must be proper Position type')
+        if p._container is not self:
+            raise ValueError('p does not belong to this container')
+        if p._node._next is None:
+            raise ValueError('p is no longer valid')
+        return p._node
+
+    def _make_position(self,node):
+        """Return Position instance for given node (or None if sentinel)."""
+        if node is self._header or node is self._trailer:
+            return None # boundary violation
+        else:
+            return self.Position(self,node) # legitimate position
+
+    # -----------------accessor------------------------------------
+    def first(self):
+        return self._make_position(self._header._next)
+
+    def last(self):
+        return self._make_position(self._trailer._prev)
+
+    def before(self,p):
+        node=self._validate(p)
+        return self._make_position(node._next)
+
+    def __iter__(self):
+        """Generate a forward iteration of the elements of the list."""
+        cursor=self.first()
+        while cursor is not None:
+            yield cursor.element()
+            cursor=self.after(cursor)
+
+    # -----------------mutators-------------------------------------
+
+
+
+
+
 
 
 
