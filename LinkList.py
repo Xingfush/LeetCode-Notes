@@ -232,8 +232,8 @@ class PositionalList(_DoublyLinkedBase):
     class Position:
         """An abstraction representing the location of a single element."""
         def __init__(self,container,node):
-            self._container=container
-            self._node=node
+            self._container=container # 以PositionalList对象（而非类）为参数传入，用于检验是否是对一个对象操作
+            self._node=node # 对 node 进行一个封装，多了一个指向node的引用
 
         def element(self):
             return self._node._element
@@ -249,16 +249,18 @@ class PositionalList(_DoublyLinkedBase):
     # ---------------utility method-------------------------------
     def _validate(self,p):
         """Return position'node, or raise appropriate error if invalid."""
+        # validate 返回node引用，相当于是一个解p的作用，使用底层方法前，先解位置p至节点node
         if not isinstance(p,self.Position):
             raise TypeError('p must be proper Position type')
-        if p._container is not self:
+        if p._container is not self: # self 指的就是一个对象，正在操作的对象
             raise ValueError('p does not belong to this container')
-        if p._node._next is None:
+        if p._node._next is None: # convention for deprecated nodes.
             raise ValueError('p is no longer valid')
         return p._node
 
     def _make_position(self,node):
         """Return Position instance for given node (or None if sentinel)."""
+        # make_position 将node包装为Position，与validate一升一降，升可用子类的index操作，降可用父类的Node操作
         if node is self._header or node is self._trailer:
             return None # boundary violation
         else:
@@ -273,6 +275,10 @@ class PositionalList(_DoublyLinkedBase):
 
     def before(self,p):
         node=self._validate(p)
+        return self._make_position(node._prev)
+
+    def after(self,p):
+        node=self._validate(p)
         return self._make_position(node._next)
 
     def __iter__(self):
@@ -280,9 +286,42 @@ class PositionalList(_DoublyLinkedBase):
         cursor=self.first()
         while cursor is not None:
             yield cursor.element()
-            cursor=self.after(cursor)
+            cursor=self.after(cursor) # after() 是iter的关键
 
     # -----------------mutators-------------------------------------
+
+    def _insert_between(self,e,predecessor,successor):
+        """Add element between existing nodes and return new Position."""
+        node=super()._insert_between(e,predecessor,successor)
+        return self._make_position(node) # 只是对 insert_between的返回加了一层包装，输入没有包装
+
+    def add_first(self,e):
+        """Insert element e at the front of the list and return new Position."""
+        return self._insert_between(e,self._header,self._header._next)
+
+    def add_last(self,e):
+        return self._insert_between(e,self._trailer._prev,self._trailer)
+
+    def add_before(self,p,e):
+        """"Insert element e into list before Position p and return new Position."""
+        original=self._validate(p)
+        return self._insert_between(e,original._prev,original)
+
+    def add_after(self,p,e):
+        original=self._validate(p)
+        return self._insert_between(e,original,original._next)
+
+    def delete(self,p):
+        original=self._validate(p)
+        return self._delete_node(original)
+
+    def replace(self,p,e):
+        """Replace the element at Position p with e, return the element formerly at Position p"""
+        original=self._validate(p)
+        old_value=original._element
+        original._element=e
+        return old_value
+
 
 
 

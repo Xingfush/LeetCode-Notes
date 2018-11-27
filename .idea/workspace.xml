@@ -92,8 +92,8 @@
       <file leaf-file-name="LinkList.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LinkList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="283" column="12" lean-forward="true" selection-start-line="283" selection-start-column="12" selection-end-line="283" selection-end-column="12" />
+            <state relative-caret-position="458">
+              <caret line="324" lean-forward="true" selection-start-line="324" selection-end-line="324" />
             </state>
           </provider>
         </entry>
@@ -138,8 +138,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="855" />
     <option name="width" value="1232" />
     <option name="height" value="1047" />
   </component>
@@ -440,11 +439,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543159667376</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Positional LinkedList added.">
+      <created>1543246769466</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1543246769466</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="900" y="0" width="1232" height="1047" extended-state="0" />
+    <frame x="855" y="0" width="1232" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="1" weight="0.17001675" />
@@ -536,7 +542,8 @@
     <MESSAGE value="Stack and Queue in Python added." />
     <MESSAGE value="Queue and Deque implementation finished." />
     <MESSAGE value="LinkedList added." />
-    <option name="LAST_COMMIT_MESSAGE" value="LinkedList added." />
+    <MESSAGE value="Positional LinkedList added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Positional LinkedList added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -830,10 +837,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="782" column="8" selection-start-line="782" selection-start-column="8" selection-end-line="782" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LinkList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="283" column="12" lean-forward="true" selection-start-line="283" selection-start-column="12" selection-end-line="283" selection-end-column="12" />
+        <state relative-caret-position="458">
+          <caret line="324" lean-forward="true" selection-start-line="324" selection-end-line="324" />
         </state>
       </provider>
     </entry>
