@@ -156,11 +156,9 @@ def canPartition(nums):
 if __name__ == '__main__':
     X='saturdaywendy'
     Y='sundayandy'
-    A=[1, 3, 5, 7 ,9 ,11 ,13, 15, 17, 19, 20]
-    B=[2,5]
-    C=[1,2,3,5,6,5,2,1]
-    #print("Length of Longest Common Subsequence is: ",LongestIncreaseSequence(A))
+    A=[1, 3, 5, 7 ,15 ,17 ,18, 8, 9, 10, 14]
+    print("Length of Longest Increasing Subsequence is: ",LongestIncreaseSequence(A))
     #PrintLCS(X,Y,LongestCommonSequence(X,Y))
     #print("The key is in a region:",lower_bound(B,5))
     #print("the edit distance between str1 and str2 is:",editDistance(X,Y))
-    print("The array can partition into two subset with equal sum:", canPartition(C))
+    # print("The array can partition into two subset with equal sum:", canPartition(C))
