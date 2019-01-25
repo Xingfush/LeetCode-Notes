@@ -59,3 +59,37 @@ def LongestIncreaseSubsequence(num):
     return res
 ```
 
+### 5.Longest Unique Subsequence
+
+本题的思路和4基本一致，记录最大值和更新游标，唯一不同的是判别条件。如何判别子序列中含有重复元素，显然使用哈希表，python中集合和字典均可以实现哈希表。
+
+要区分清楚，对于字典`dict.get(key,default_value)`仅用于`read`键为空返回默认值，不能用于设置时候使用。另外，推荐使用`dict.pop`方法进行删除键，键不存在时可以设置默认返回值。
+
+注意集合的使用：
+
+```python
+st = set() # 初始化
+st.add('a') # 添加元素
+st.remove('b') # 删除元素
+st.discard('c') # 删除元素，元素不存在不会出错
+set1 & set2 # 集合与
+set1 | set1 # 集合并
+```
+
+### 6.Two Sum
+
+使用哈希表，此题最优解法的技巧性较强，多加记忆理解。
+
+```python
+def TwoSum(num,value):
+    dic = {}
+    res = []
+    for i in range(len(num)):
+        if num[i] in dic:
+            res.append([i,dic[num[i]]])
+            dic.pop(num[i])
+        else:
+            dic[value-num[i]] = i
+    return res
+```
+

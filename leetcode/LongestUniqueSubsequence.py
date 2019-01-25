@@ -12,5 +12,19 @@ def LongestUniqueSubsequence(s):
         res = max(res, i-j+1)
     return res
 
+def LongestUniqueSubsequence2(s):
+    st = set()
+    res = 0
+    j = 0
+    for i in range(len(s)):
+        if s[i] not in st:
+            st.add(s[i])
+        else:
+            while (s[i] in st):
+                st.remove(s[j])
+                j += 1
+        res = max(res, i-j+1)
+    return res
+
 if __name__=='__main__':
-    print(LongestUniqueSubsequence("abcdefdhiajq"))
+    print(LongestUniqueSubsequence2("abcdefdhiajq"))
