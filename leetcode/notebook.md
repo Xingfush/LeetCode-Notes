@@ -93,3 +93,47 @@ def TwoSum(num,value):
     return res
 ```
 
+### 7.Max Subarray
+
+#### 解法1：动态规划
+
+有关子序列问题的，关键点在于记录之前子序列的最大值，如何更新最大值，同时注意游标的设置。
+
+这里有两个变量`max_so_far`用来记录遍历至此最大的子序列的和，`max_ending_here`表示当前子序列的和，两者不断进行比较。`max_ending_here`的更新很有技巧性，如果`max_ending_here`为负，那么直接舍弃，置为0，重新开始新的子序列。如果要求开始和终止的索引，那么就必须设置游标。
+
+另外注意，如果题目要求，子序列的长度可以为零，那么也就是最大值>=0，则`max_ending_here`和`max_so_far`的起始值设置为0；如果子序列的长度>=1，也就是不能为空，那么子序列就必须初始化为`array[0]`，而且`max_ending_here<0, max_ending_here=0`这一条也要去掉。简化为：
+
+```python
+def MaxSubarray(array):
+    max_ending_here = array[0]
+    max_so_far = array[0]
+    for i in range(1,len(array)):
+        max_ending_here = max(max_ending_here+array[i],array[i])
+        max_so_far = max(max_so_far, max_ending_here)
+    return max_so_far
+```
+
+游标的设置，需要两对，`j->i`用来标记`max_ending_here`；`start->end`用来标记`max_so_far`。
+
+```python
+def MaxSubarray(array):
+    max_ending_here = 0
+    max_so_far = 0
+    start = 0
+    end = 0 # 子序列 [start, end ) 左开右闭
+    j = 0
+    for i in range(len(array)):
+        max_ending_here = max_ending_here + array[i]
+        if max_ending_here < 0:
+            max_ending_here = 0
+            j = i+1
+        elif max_ending_here > max_so_far:
+            max_so_far = max_ending_here
+            start = j
+            end = i+1
+    return start,end
+```
+
+
+
+#### 解法2：分治法

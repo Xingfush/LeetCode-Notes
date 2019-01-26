@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="note book added.">
-      <change afterPath="$PROJECT_DIR$/leetcode/TwoSum.py" afterDir="false" />
+    <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/leetcode/MaxSubarray.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RECURSIVE.py" beforeDir="false" afterPath="$PROJECT_DIR$/RECURSIVE.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leetcode/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/notebook.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TwoSum.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/leetcode/TwoSum.py">
+      <file leaf-file-name="RECURSIVE.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="1350">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaxSubarray.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
@@ -47,6 +56,7 @@
     <setting file="file://$PROJECT_DIR$/leetcode/LongestIncreaseSubsequence.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/LongestCommonSequence.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/LCS.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/RECURSIVE.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Heap.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/queuexf.py" root0="SKIP_INSPECTION" />
@@ -68,7 +78,6 @@
         <option value="$PROJECT_DIR$/PythonFunc.py" />
         <option value="$PROJECT_DIR$/Sorting.py" />
         <option value="$PROJECT_DIR$/Heap.py" />
-        <option value="$PROJECT_DIR$/RECURSIVE.py" />
         <option value="$PROJECT_DIR$/Stack.py" />
         <option value="$PROJECT_DIR$/Queue.py" />
         <option value="$PROJECT_DIR$/LinkList.py" />
@@ -83,6 +92,8 @@
         <option value="$PROJECT_DIR$/leetcode/BinarySearch.py" />
         <option value="$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" />
         <option value="$PROJECT_DIR$/leetcode/TwoSum.py" />
+        <option value="$PROJECT_DIR$/leetcode/MaxSubarray.py" />
+        <option value="$PROJECT_DIR$/RECURSIVE.py" />
       </list>
     </option>
   </component>
@@ -140,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TwoSum">
+  <component name="RunManager" selected="Python.MaxSubarray">
     <configuration name="BinarySearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -154,24 +165,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/BinarySearch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="LongestIncreaseSequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="LeetCode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/LongestIncreaseSequence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -213,6 +206,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="MaxSubarray" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/MaxSubarray.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="TwoSum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -232,19 +243,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.LongestIncreaseSequence" />
       <item itemvalue="Python.LongestIncreaseSubsequence" />
       <item itemvalue="Python.BinarySearch" />
       <item itemvalue="Python.LongestUniqueSubsequence" />
       <item itemvalue="Python.TwoSum" />
+      <item itemvalue="Python.MaxSubarray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MaxSubarray" />
         <item itemvalue="Python.TwoSum" />
         <item itemvalue="Python.LongestUniqueSubsequence" />
         <item itemvalue="Python.LongestIncreaseSubsequence" />
         <item itemvalue="Python.BinarySearch" />
-        <item itemvalue="Python.LongestIncreaseSequence" />
       </list>
     </recent_temporary>
   </component>
@@ -441,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548408439753</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Run, Forest! Run!">
+      <created>1548429697291</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1548429697291</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -459,41 +477,32 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.29989094" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.23882225" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.13224447" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.21810251" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.29989094" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
-      <window_info anchor="bottom" id="Python Console" order="0" weight="0.19629225" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17001675" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3293348" />
       <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32929516" />
-      <window_info anchor="bottom" id="Python Console" order="0" weight="0.3293348" />
-      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3293348" />
       <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Python Console" order="0" weight="0.3293348" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +535,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Longest Increasing Sequence Done." />
     <MESSAGE value="Reconstruction Done!" />
     <MESSAGE value="Some practices for divide-and-conquer" />
     <MESSAGE value="remote test!" />
@@ -551,7 +559,8 @@
     <MESSAGE value="Positional LinkedList finished." />
     <MESSAGE value="sort out files in order." />
     <MESSAGE value="note book added." />
-    <option name="LAST_COMMIT_MESSAGE" value="note book added." />
+    <MESSAGE value="Run, Forest! Run!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Run, Forest! Run!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -559,13 +568,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PythonFunc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Heap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1650">
@@ -806,20 +808,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithm/LongestCommonSequence.py" />
-    <entry file="file://$PROJECT_DIR$/Heap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2275">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.jupyter/jupyter_notebook_config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
@@ -888,16 +876,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1850">
           <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="e#76#107#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/TwoSum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
+        <state relative-caret-position="667">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
