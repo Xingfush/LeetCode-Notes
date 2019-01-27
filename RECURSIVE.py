@@ -146,5 +146,5 @@ if __name__ == '__main__':
     r=[1,3,5,7,9]
     s=[2,4,6,8,10,11,12,13]
     opstr='2*3-4*5'
-    print("The max subarray is:",MergeSort(A))
-    # print('All values of different ways to compute are:',diffWaysToCompute(opstr))
+    # print("The max subarray is:",MergeSort(A))
+    print('All values of different ways to compute are:',diffWaysToCompute2(opstr))

@@ -1,7 +1,9 @@
 # Example 1: Max Subarray
 
 def maxcrossSubarray(nums,mid):
-    left = right = 0
+    # left = right = 0
+    left = nums[mid-1]
+    right = nums[mid]
     lsum = 0
     for num in reversed(nums[:mid]):
         lsum += num
@@ -31,4 +33,4 @@ def MaxSubarray(array):
 
 if __name__ == '__main__':
     print(maxcrossSubarray([5,6,8,-7,-4,-5,-3,-8,2,-10],5))
-    print(MaxSubarray([5,6,8,-7,-4,-5,-3,-8,2,-10]))
+    print(MaxSubarray([-5,-6,-8,-7,-4,-5,-3,-8,-2,-10]))

@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode/MaxSubarray.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/AddParentheses.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RECURSIVE.py" beforeDir="false" afterPath="$PROJECT_DIR$/RECURSIVE.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leetcode/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/notebook.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/recursive.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/Recursive.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,17 +20,35 @@
       <file leaf-file-name="RECURSIVE.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="450">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MaxSubarray.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MaxSubarray.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="1308">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Recursive.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/Recursive.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="800">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddParentheses.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/AddParentheses.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -67,8 +86,10 @@
     <setting file="file://$PROJECT_DIR$/PythonClass.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/BinarySearch.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/substring.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/AddParentheses.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/SeniorProgramming.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/Recursive.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -93,7 +114,10 @@
         <option value="$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" />
         <option value="$PROJECT_DIR$/leetcode/TwoSum.py" />
         <option value="$PROJECT_DIR$/leetcode/MaxSubarray.py" />
+        <option value="$PROJECT_DIR$/leetcode/recursive.py" />
+        <option value="$PROJECT_DIR$/leetcode/Recursive.py" />
         <option value="$PROJECT_DIR$/RECURSIVE.py" />
+        <option value="$PROJECT_DIR$/leetcode/AddParentheses.py" />
       </list>
     </option>
   </component>
@@ -151,8 +175,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MaxSubarray">
-    <configuration name="BinarySearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.AddParentheses">
+    <configuration name="AddParentheses" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -164,43 +188,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/BinarySearch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="LongestIncreaseSubsequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="LeetCode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/LongestIncreaseSubsequence.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="LongestUniqueSubsequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="LeetCode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/AddParentheses.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -224,6 +212,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="RECURSIVE" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RECURSIVE.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="TwoSum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -242,20 +248,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="recursive" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="E:\pycode\LeetCode\leetcode\Recursive.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
-      <item itemvalue="Python.LongestIncreaseSubsequence" />
-      <item itemvalue="Python.BinarySearch" />
-      <item itemvalue="Python.LongestUniqueSubsequence" />
       <item itemvalue="Python.TwoSum" />
       <item itemvalue="Python.MaxSubarray" />
+      <item itemvalue="Python.recursive" />
+      <item itemvalue="Python.RECURSIVE" />
+      <item itemvalue="Python.AddParentheses" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.AddParentheses" />
+        <item itemvalue="Python.RECURSIVE" />
+        <item itemvalue="Python.recursive" />
         <item itemvalue="Python.MaxSubarray" />
         <item itemvalue="Python.TwoSum" />
-        <item itemvalue="Python.LongestUniqueSubsequence" />
-        <item itemvalue="Python.LongestIncreaseSubsequence" />
-        <item itemvalue="Python.BinarySearch" />
       </list>
     </recent_temporary>
   </component>
@@ -459,7 +483,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548429697291</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Max Subarray added.">
+      <created>1548483694860</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1548483694860</updated>
+    </task>
+    <task id="LOCAL-00029" summary="recursive added.">
+      <created>1548485740016</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1548485740016</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -471,7 +509,7 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.23882225" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.19629225" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.21810251" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.25517994" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -535,8 +573,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reconstruction Done!" />
-    <MESSAGE value="Some practices for divide-and-conquer" />
     <MESSAGE value="remote test!" />
     <MESSAGE value="Format Standardization." />
     <MESSAGE value="LIS completed." />
@@ -560,7 +596,9 @@
     <MESSAGE value="sort out files in order." />
     <MESSAGE value="note book added." />
     <MESSAGE value="Run, Forest! Run!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Run, Forest! Run!" />
+    <MESSAGE value="Max Subarray added." />
+    <MESSAGE value="recursive added." />
+    <option name="LAST_COMMIT_MESSAGE" value="recursive added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -568,27 +606,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Heap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2275">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/queuexf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -893,17 +910,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
+    <entry file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="1308">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/lxml/html/diff.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="194">
+          <caret line="496" lean-forward="true" selection-start-line="496" selection-end-line="496" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/Recursive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/AddParentheses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
