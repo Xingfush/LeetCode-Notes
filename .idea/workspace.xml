@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode/MergeSort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/QuickSort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RECURSIVE.py" beforeDir="false" afterPath="$PROJECT_DIR$/RECURSIVE.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leetcode/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/notebook.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,17 +19,26 @@
       <file leaf-file-name="RECURSIVE.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="1075">
+              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeSort.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuickSort.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/QuickSort.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MergeSort.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/MergeSort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="408">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -36,7 +46,7 @@
       <file leaf-file-name="Recursive.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/Recursive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="800">
               <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
@@ -63,9 +73,11 @@
     <setting file="file://$PROJECT_DIR$/leetcode/LongestIncreaseSequence.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/LongestIncreaseSubsequence.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/LongestCommonSequence.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/QuickSort.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/LCS.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/MergeSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/InsertSort.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/RECURSIVE.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Heap.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/queuexf.py" root0="SKIP_INSPECTION" />
@@ -106,9 +118,11 @@
         <option value="$PROJECT_DIR$/leetcode/MaxSubarray.py" />
         <option value="$PROJECT_DIR$/leetcode/recursive.py" />
         <option value="$PROJECT_DIR$/leetcode/Recursive.py" />
-        <option value="$PROJECT_DIR$/RECURSIVE.py" />
         <option value="$PROJECT_DIR$/leetcode/AddParentheses.py" />
         <option value="$PROJECT_DIR$/leetcode/MergeSort.py" />
+        <option value="$PROJECT_DIR$/leetcode/InsertSort.py" />
+        <option value="$PROJECT_DIR$/RECURSIVE.py" />
+        <option value="$PROJECT_DIR$/leetcode/QuickSort.py" />
       </list>
     </option>
   </component>
@@ -166,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MergeSort">
+  <component name="RunManager" selected="Python.QuickSort">
     <configuration name="AddParentheses" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,7 +199,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="MaxSubarray" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="InsertSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -197,7 +211,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/MaxSubarray.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/InsertSort.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,6 +235,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="QuickSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/QuickSort.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="RECURSIVE" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,38 +271,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="recursive" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="LeetCode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="E:\pycode\LeetCode\leetcode\Recursive.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
-      <item itemvalue="Python.MaxSubarray" />
-      <item itemvalue="Python.recursive" />
       <item itemvalue="Python.RECURSIVE" />
       <item itemvalue="Python.AddParentheses" />
       <item itemvalue="Python.MergeSort" />
+      <item itemvalue="Python.InsertSort" />
+      <item itemvalue="Python.QuickSort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.QuickSort" />
+        <item itemvalue="Python.InsertSort" />
+        <item itemvalue="Python.RECURSIVE" />
         <item itemvalue="Python.MergeSort" />
         <item itemvalue="Python.AddParentheses" />
-        <item itemvalue="Python.RECURSIVE" />
-        <item itemvalue="Python.recursive" />
-        <item itemvalue="Python.MaxSubarray" />
       </list>
     </recent_temporary>
   </component>
@@ -502,7 +516,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548559165700</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Merge sort added.">
+      <created>1548573053760</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1548573053760</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Insert sort added.">
+      <created>1548575330330</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1548575330330</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -514,7 +542,7 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.23882225" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.19629225" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.25517994" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3293348" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -578,8 +606,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LIS completed." />
-    <MESSAGE value="binary search added." />
     <MESSAGE value="edit distance added." />
     <MESSAGE value="two equal subsets partition added." />
     <MESSAGE value="Senior programming decorator added." />
@@ -603,28 +629,16 @@
     <MESSAGE value="recursive added." />
     <MESSAGE value="Different ways to add parentheses using recursive method." />
     <MESSAGE value="Add parentheses added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add parentheses added." />
+    <MESSAGE value="Merge sort added." />
+    <MESSAGE value="Insert sort added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Insert sort added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LinkList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5100">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeniorProgramming.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4350">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LCS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -929,24 +943,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
+    <entry file="file://$PROJECT_DIR$/leetcode/Recursive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+        <state relative-caret-position="800">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/Recursive.py">
+    <entry file="file://$PROJECT_DIR$/leetcode/InsertSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="200">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RECURSIVE.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/MergeSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="408">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/QuickSort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

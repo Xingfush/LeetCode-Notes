@@ -107,16 +107,6 @@ def diffWaysToCompute2(input):
 # if c not in '+-*'，那么a,b都是空，[a+b]也是空，相反[int(input)]此时必是一个值。
 # 多级的for循环在列表推导式里是相乘的
 
-def InsertSort(nums):
-    for i in range(1,len(nums)):
-        key=nums[i]
-        j=i-1
-        while j>=0 and nums[j]>key:
-            nums[j+1]=nums[j]
-            j-=1
-        nums[j+1]=key
-    return nums
-
 
 if __name__ == '__main__':
     A=[2,-5,3,7,-11,8,-10,-3,6,89,80,3,4]
