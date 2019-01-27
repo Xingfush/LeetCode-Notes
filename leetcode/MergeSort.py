@@ -43,4 +43,4 @@ def MergeSort(array,l,r):
 
 if __name__ == '__main__':
     print(merge([1,2,5,9,12,20],0,6,6))
-    print(MergeSort([-9,10,3,42,-2,7,5,2,2,7],0,10))
+    print(MergeSort([1,2,3,4,5,6,7,8,9,10],0,10))
