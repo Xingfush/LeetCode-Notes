@@ -8,8 +8,8 @@ def helper(m,n,op):
 
 def AddParentheses(input):
     if input.isdigit():
-        return [int(input)]
-    res = []
+        return [int(input)] # 一个元素依然要使用列表形式
+    res = [] # 多种情况都要返回，但每次只能计算一个，因此最终要汇总成一个List
     for i in range(len(input)):
         if input[i] in '+-*':
             res1 = AddParentheses(input[:i])
@@ -29,4 +29,4 @@ def AddParentheses2(input):
 
 if __name__ == '__main__':
     opstr='2*3-4*5+6'
-    print('All values of different ways to compute are:',AddParentheses22(opstr))
+    print('All values of different ways to compute are:',AddParentheses2(opstr))
