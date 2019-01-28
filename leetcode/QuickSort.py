@@ -1,10 +1,4 @@
-def QuickSort(array, l, r):
-    if l < r:
-        q = partition(array, l, r)
-        QuickSort(array, l, q - 1)
-        QuickSort(array, q + 1, r)
-    return array
-
+# Lomuto Scheme
 def partition(array, l, r):
     x = array[r]
     i = l - 1
@@ -15,7 +9,58 @@ def partition(array, l, r):
     array[i + 1], array[r] = array[r], array[i + 1]
     return i + 1
 
+def QuickSort(array, l, r):
+    if l < r:
+        q = partition(array, l, r)
+        QuickSort(array, l, q - 1)
+        QuickSort(array, q + 1, r)
+    return array
+
+# Hoare Scheme
+def partition2(array,l,r):
+    pivot = array[l]
+    left = l +1
+    right = r
+    while left <= right:
+        while left <= right and array[left] <= pivot:
+            left += 1
+        while left <= right and array[right] >= pivot:
+            right -= 1
+        if left <= right:
+            array[left],array[right] = array[right],array[left]
+    array[l],array[right] = array[right],array[l]
+    return right
+
+def QuickSort2(array, l, r):
+    if l<r:
+        k = partition2(array, l, r)
+        QuickSort2(array,l,k-1)
+        QuickSort2(array,k+1,r)
+    return array
+
+# 最优实现，应试优先
+def QuickSort3(array,l,r):
+    if l>=r:
+        return
+    left = l
+    right = r
+    pivot = array[left]
+    while left < right:
+        while left < right and array[right] > pivot:
+            right -= 1
+        array[left] = array[right]
+        while left < right and array[left] <= pivot:
+            left += 1
+        array[right] = array[left]
+    array[right] = pivot
+    QuickSort3(array, l, left-1)
+    QuickSort3(array, left+1, r)
+    return array
 
 if __name__ == '__main__':
-    # print(partition([8,7,6,5,4,3,2,1], 0, 8))
-    print(QuickSort([-9, 10, 3, 42, -11, 11, -20, 13, 15, -9], 0, 9))
+    print(QuickSort3([8,7,6,5,4,3,2,1], 0, 7))
+    print(QuickSort3([1,2,3,4,5,6,7,8], 0, 7))
+    print(QuickSort3([1,1,1,1,1,1,1,1], 0, 7))
+    print(QuickSort3([-1, 2, 7, 1, 10, 1, -5,3], 0, 7))
+    print(QuickSort3([1,0],0,1))
+    print(QuickSort3([1],0,0))

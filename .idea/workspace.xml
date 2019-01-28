@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode/QuickSort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RECURSIVE.py" beforeDir="false" afterPath="$PROJECT_DIR$/RECURSIVE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/QuickSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/QuickSort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leetcode/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/notebook.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="QuickSort.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leetcode/QuickSort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="250">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -37,7 +36,7 @@
       <file leaf-file-name="MergeSort.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/MergeSort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="1050">
               <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
@@ -119,9 +118,9 @@
         <option value="$PROJECT_DIR$/leetcode/recursive.py" />
         <option value="$PROJECT_DIR$/leetcode/Recursive.py" />
         <option value="$PROJECT_DIR$/leetcode/AddParentheses.py" />
-        <option value="$PROJECT_DIR$/leetcode/MergeSort.py" />
         <option value="$PROJECT_DIR$/leetcode/InsertSort.py" />
         <option value="$PROJECT_DIR$/RECURSIVE.py" />
+        <option value="$PROJECT_DIR$/leetcode/MergeSort.py" />
         <option value="$PROJECT_DIR$/leetcode/QuickSort.py" />
       </list>
     </option>
@@ -281,9 +280,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.QuickSort" />
+        <item itemvalue="Python.MergeSort" />
         <item itemvalue="Python.InsertSort" />
         <item itemvalue="Python.RECURSIVE" />
-        <item itemvalue="Python.MergeSort" />
         <item itemvalue="Python.AddParentheses" />
       </list>
     </recent_temporary>
@@ -530,7 +529,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548575330330</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Quick Sort added.">
+      <created>1548582474293</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1548582474293</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Quick Sort modified.">
+      <created>1548600880154</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1548600880154</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -542,11 +555,11 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.23882225" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.19629225" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3293348" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.302072" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32929516" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.29989094" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.32497275" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -606,8 +619,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="edit distance added." />
-    <MESSAGE value="two equal subsets partition added." />
     <MESSAGE value="Senior programming decorator added." />
     <MESSAGE value="Class decorator added." />
     <MESSAGE value="Class decorator finished." />
@@ -631,11 +642,13 @@
     <MESSAGE value="Add parentheses added." />
     <MESSAGE value="Merge sort added." />
     <MESSAGE value="Insert sort added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Insert sort added." />
+    <MESSAGE value="Quick Sort added." />
+    <MESSAGE value="Quick Sort modified." />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick Sort modified." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="30" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -966,15 +979,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/MergeSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="1050">
           <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/QuickSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="250">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
