@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datastructure/heap_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/HeapSort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Heap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Heap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/notebook.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/substring.py" beforeDir="false" />
+    <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="Heap sort added.">
+      <change beforePath="$PROJECT_DIR$/leetcode/HeapSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/HeapSort.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Heap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-725">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="400">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -31,17 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leetcode/HeapSort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetcode/QuickSort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="275">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -119,13 +103,13 @@
         <option value="$PROJECT_DIR$/leetcode/AddParentheses.py" />
         <option value="$PROJECT_DIR$/RECURSIVE.py" />
         <option value="$PROJECT_DIR$/leetcode/MergeSort.py" />
-        <option value="$PROJECT_DIR$/leetcode/QuickSort.py" />
         <option value="$PROJECT_DIR$/leetcode/ShellSort.py" />
         <option value="$PROJECT_DIR$/leetcode/InsertSort.py" />
         <option value="$PROJECT_DIR$/Heap.py" />
         <option value="$PROJECT_DIR$/datastructure/heap_.py" />
         <option value="$PROJECT_DIR$/Stack.py" />
         <option value="$PROJECT_DIR$/leetcode/HeapSort.py" />
+        <option value="$PROJECT_DIR$/leetcode/QuickSort.py" />
       </list>
     </option>
   </component>
@@ -164,7 +148,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/pycode/LeetCode/SeniorProgramming.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyESN-master" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -576,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548686139521</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Heap sort added.">
+      <created>1548757139611</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1548757139611</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -673,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Class decorator finished." />
     <MESSAGE value="Class and SubClass finished." />
     <MESSAGE value="Python function tools added." />
     <MESSAGE value="generator added." />
@@ -698,7 +688,8 @@
     <MESSAGE value="Quick Sort modified." />
     <MESSAGE value="Optimized quick sort." />
     <MESSAGE value="Shell sort added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Shell sort added." />
+    <MESSAGE value="Heap sort added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Heap sort added." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/itertools.py">
@@ -884,13 +875,6 @@
     <entry file="file://$PROJECT_DIR$/datastructure/heap_.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Heap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/Recursive.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -900,15 +884,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/QuickSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="1450">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/HeapSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="275">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
