@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78218f09-4cfa-440a-a19e-d07f595b363f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datastructure/heap_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/HeapSort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LeetCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LeetCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Heap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Heap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/notebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/notebook.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/substring.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Heap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-725">
+            <state>
               <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
@@ -31,7 +26,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leetcode/HeapSort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="281">
               <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
@@ -40,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/QuickSort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
+            <state>
               <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
@@ -66,32 +61,33 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/leetcode/QuickSort.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/RECURSIVE.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Heap.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/Recursive.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/LinkList.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SeniorProgramming.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/RECURSIVE.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Heap.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Stack.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/PythonFunc.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/HeapSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/PythonClass.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/LCS.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/queuexf.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/AddParentheses.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/TwoSum.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/HeapSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/MergeSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/ShellSort.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/BinarySearch.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/LongestIncreaseSequence.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/LongestCommonSequence.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/ShellSort.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/LongestIncreaseSubsequence.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/PythonClass.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/AddParentheses.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/MaxSubarray.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/TwoSum.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/SeniorProgramming.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/leetcode/MergeSort.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/leetcode/InsertSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/LongestCommonSequence.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/QuickSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/LongestIncreaseSubsequence.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -130,9 +126,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="787" />
-    <option name="width" value="1186" />
-    <option name="height" value="1047" />
+    <option name="x" value="786" />
+    <option name="width" value="1187" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -142,29 +138,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/pycode/LeetCode/SeniorProgramming.py" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyESN-master" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="D:/Mysoftware/Git/bin/git.exe" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -580,11 +561,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.13224447" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1321004" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49894625" weight="0.19522777" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49947312" weight="0.3286334" />
@@ -701,21 +682,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Shell sort added." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/itertools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="252" column="7" lean-forward="true" selection-start-line="252" selection-start-column="7" selection-end-line="252" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/itertools.py" />
     <entry file="file://$PROJECT_DIR$/Sorting.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="782" column="8" selection-start-line="782" selection-start-column="8" selection-end-line="782" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/builtins.py" />
     <entry file="file://$PROJECT_DIR$/LinkList.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -731,13 +700,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithm/LongestCommonSequence.py" />
-    <entry file="file://$USER_HOME$/.jupyter/jupyter_notebook_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.jupyter/jupyter_notebook_config.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -795,13 +758,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/lxml/html/diff.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="496" lean-forward="true" selection-start-line="496" selection-end-line="496" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1144012606/lxml/html/diff.py" />
     <entry file="file://$PROJECT_DIR$/leetcode/AddParentheses.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -831,14 +788,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/substring.py" />
-    <entry file="file://$PROJECT_DIR$/leetcode/heap.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/heap.md" />
     <entry file="file://$PROJECT_DIR$/leetcode/ShellSort.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -881,16 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datastructure/heap_.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Heap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/Recursive.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -898,16 +838,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Heap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/QuickSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
+        <state>
           <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datastructure/heap_.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/HeapSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="281">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
