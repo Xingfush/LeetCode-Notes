@@ -64,7 +64,6 @@ def topKFrequent(nums, k):
             dic[num]+=1
         else:
             dic[num]=1
-
     for key in dic:
         heappush(heap, (-dic[key], key))
 

@@ -399,4 +399,3 @@ def QuickSort(array,l,r):
 4. 所有的情况都可以归结为这两种结束方式，`left added to right` or `right decreased to left`，构成一个交换的闭环。
 
 另外一点需要注意的是，`array[right]>pivot and array[left]<=pivot`一定是完整的`> and <=`，不然无法处理元素和`pivot`相等的情况，而且由于不是`>= and <=`，`right and left`至多以`=`结束，不会出现上面实现方式中的`left>right`，所以终止判别条件是`left<right , instead of left<=right`。 
-

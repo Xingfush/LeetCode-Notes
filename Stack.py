@@ -67,13 +67,6 @@ def is_matched_html(raw):
 
     return S.is_empty()
 
-
-
-
-
-
-
-
 if __name__=='__main__':
     expr='[(2+5)*3-5]/2-2-[1-9*(3+1)]}'
     print('Is the expr matched:',is_matched(expr))
