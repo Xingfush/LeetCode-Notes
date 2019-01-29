@@ -14,7 +14,7 @@ def HeapSort(array):
     n = len(array)
     for i in reversed(range(n//2)):
         MaxHeapify(array,n-1,i)
-    for i in reversed(range(1,len(array))):
+    for i in reversed(range(1,len(array))): # n是变化的，所以这里不能使用n
         array[i],array[0] = array[0],array[i]
         n -= 1
         MaxHeapify(array,n-1,0)
