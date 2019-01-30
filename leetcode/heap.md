@@ -117,7 +117,9 @@ def HeapSort(array):
 * `Maximum(S)`返回队列中key 值最大的元素
 * `Increase-key(s,x,k)`修改队列元素，使得元素`x`的key value变为k。
 
+#### 5.Python Package for Heap
 
 
 ## Examples
+### 1.Find Kth largest value
 
