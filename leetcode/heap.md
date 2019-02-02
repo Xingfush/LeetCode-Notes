@@ -107,19 +107,78 @@ def HeapSort(array):
 
 和快速排序相比，堆排序并不占优势，虽然二者时间复杂度都是`O(nlgn)`，堆最广泛的应用为`Priority Queues`优先队列。
 
->***Priority Queue*** is a data structure for maintaining a set $S$ of elements, each with an associated value called a $key$.   It is widely applied in job scheduling or event-driven simulation.                 -- *Introduction to Algorithm*
+>***Priority Queue*** is a data structure for maintaining a set $S$ of elements, each with an associated value called a $key$.   It is widely applied in job scheduling or event-driven simulation.                                                                                   --- *Introduction to Algorithm*
 >
 >很像Python中字典这个数据结构 Key-value，键值对
 
 一个`Max-priority queue`应该支持以下操作：
 
-* `Insert(S,x)`将一个元素插入集合$S$
-* `Maximum(S)`返回队列中key 值最大的元素
-* `Increase-key(s,x,k)`修改队列元素，使得元素`x`的key value变为k。
+* `Insert(S,x)`将一个元素插入集合；
+* `Maximum(S)`返回队列中key 值最大的元素；
+* Increase-key(s,x,k)`修改队列元素，使得元素`x`的key value变为k。
+
+```python
+def HeapMaximum(array):
+    return array[0]
+
+def HeapExtractMax(array,n):
+    if n<=0:
+       raise "heap underflow error"
+    Max = array[0]
+    array[0] = array[n]
+    n -= 1
+    MaxHeapify(array,n,0)
+    return Max
+# 这里统一，使用n作为堆在array中最后一个元素的索引，而不是元素个数
+
+def HeapIncreaseKey(array,i,key):
+    if key<array[i]:
+        raise "New key value is smaller than current key."
+    array[i] = key
+    while i>0 and array[parent(i)]<array[i]:
+        array[i],array[parent(i)] = array[parent(i)],array[i]
+        i = parent
+        
+def MaxHeapInsert(array,n,key):
+    n += 1 # 堆的大小要相应地改变
+    array[n] = key
+    HeapIncreaseKey(array,n,key)
+```
+
+`HeapIncreaseKey`操作和`InsertSort`操作的思想是一致的，给新元素找到合适的位置，这个合适的位置如何确定，有两个关键点，方向和终止条件。此处，由于是key的值增大了，所以方向是向根节点移动，不断地使用`parent(i)`替换`i`。另一个是终止条件，`i>0`表示不能超过根节点，`array[parent(i)]<array[i]`表示此时已经满足最大堆性质。此操作的时间复杂度，显然是`O(lg(n))`的，因为移动路径的长度。
+
+类似的，如果是`HeapDecreaseKey`，那么相应的，移动的方向和终止条件也要改变。
+
+`MaxHeapInsert`操作以`HeapIncreaseKey`为基础，首先插入一个无穷小key值得元素，然后然后执行`HeapIncreaseKey`操作。运行时间显然是一样的。
 
 #### 5.Python Package for Heap
 
+`heapq`模块使用Python `list`完成，里面包含了操作`heappush`，`heappop`，`heapify`，`heapreplace`，`merge`，`nlargest`，`nsmallest`，`heappushpop`. 这里的`heap`使用`list`完成。和算法导论中的例子不同，这里的实现：
+
+* 使用 0-based indexing；
+* 建立最小堆，而不是最大堆；
+
+```python
+# 基本使用
+heap = []
+heappush(heap,item)
+item = heappop(heap)
+item = heap[0]
+heapify(x)
+item = heapreplace(heap,item)
+```
+
 
 ## Examples
-### 1.Find Kth largest value
+### 1.Merge Two Sorted Lists
+
+`Min Heap` 来解决这类问题，假设有k个sorted lists，每个list有n各元素（不要求每个list元素数目相等），具体的解决算法如下：
+
+1. 建立一个输出array，尺寸为n*k;
+2. 创建一个大小为k的堆，将每个list的第一个元素插入；
+3. 然后重复以下步骤 n*k步：
+   1. 取堆的最小元素放入 output array
+   2. 如果某个堆的元素被弹出放入了array，那么取出下一个元素替换堆的根节点，如果这个array没有元素了，那么就用正无穷替代。替换之后，`heapify`这个堆。
+
+
 
