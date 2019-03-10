@@ -1,13 +1,13 @@
 # Lomuto Scheme
-def partition(array, l, r):
-    x = array[r]
-    i = l - 1
-    for j in range(l, r):
-        if array[j] <= x:
-            i += 1
-            array[i], array[j] = array[j], array[i]
-    array[i + 1], array[r] = array[r], array[i + 1]
-    return i + 1
+def partition(array,l,r):
+    pivot = array[r]
+    i = l
+    for j in range(l,r):
+        if array[j]<=pivot:
+            array[j],array[i]=array[i],array[j]
+            i+=1
+    array[i],array[r]=array[r],array[i]
+    return i
 
 def QuickSort(array, l, r):
     if l < r:

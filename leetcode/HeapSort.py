@@ -1,22 +1,45 @@
+# def MaxHeapify(array,n,i):
+#     l = 2*i+1
+#     r = 2*i+2
+#     largest = i
+#     if l<=n and array[l]>array[largest]:
+#         largest = l
+#     if r<=n and array[r]>array[largest]:
+#         largest = r
+#     if largest != i:
+#         array[largest],array[i] = array[i],array[largest]
+#         MaxHeapify(array,n,largest)
+#
+# def HeapSort(array):
+#     n = len(array)
+#     for i in reversed(range(n//2)):
+#         MaxHeapify(array,n-1,i)
+#     for i in reversed(range(1,len(array))): # n是变化的，所以这里不能使用n
+#         array[i],array[0] = array[0],array[i]
+#         n -= 1
+#         MaxHeapify(array,n-1,0)
+#     return array
+
+
 def MaxHeapify(array,n,i):
-    l = 2*i+1
-    r = 2*i+2
+    l= 2*i+1
+    r= 2*i+2
     largest = i
-    if l<=n and array[l]>array[largest]:
-        largest = l
-    if r<=n and array[r]>array[largest]:
-        largest = r
+    if l<=n and array[largest]<array[l]:
+        largest=l
+    if r<=n and array[largest]<array[r]:
+        largest=r
     if largest != i:
-        array[largest],array[i] = array[i],array[largest]
+        array[largest],array[i]=array[i],array[largest]
         MaxHeapify(array,n,largest)
 
 def HeapSort(array):
     n = len(array)
     for i in reversed(range(n//2)):
         MaxHeapify(array,n-1,i)
-    for i in reversed(range(1,len(array))): # n是变化的，所以这里不能使用n
-        array[i],array[0] = array[0],array[i]
-        n -= 1
+    while n>1:
+        array[n-1],array[0]=array[0],array[n-1]
+        n-=1
         MaxHeapify(array,n-1,0)
     return array
 
