@@ -7,6 +7,7 @@ def InsertSort(array):
         array[i] = key
     return array
 
+
 if __name__ == '__main__':
     print(InsertSort([-9,10,3,42,7,7,5,2,2,7,-20,23]))
     print(InsertSort([8,7,6,5,4,3,2,1]))
