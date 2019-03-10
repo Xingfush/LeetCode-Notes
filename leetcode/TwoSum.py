@@ -21,11 +21,11 @@ def TwoSum2(num,value):
 # Brute-Force 暴力破解法
 def TwoSum3(num,value):
     l = len(num)
-    for i in range(l//2+1):
+    for i in range(l):
         for j in range(i,l):
             if num[i] + num[j] == value:
                 return i,j
     return None
 
 if __name__=='__main__':
-    print(TwoSum3([1,2,3,2,3,1,3,4,-2,7],5))
+    print(TwoSum3([1,2,3,2,3,1,3,4,-2,102],100))
