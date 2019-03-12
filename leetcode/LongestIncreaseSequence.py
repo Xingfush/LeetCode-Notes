@@ -48,5 +48,22 @@ def LongestIncreaseSequence2(A):
             tailTable[j]=A[i]
     return l
 
+# 动态规划的解法
+# Solution 2: Dynamic Programming
+def LongestIncreaseSequence3(A):
+    tails=[0]*len(A)
+    size=0
+    for x in A:
+        i,j=0,size #
+        while i!=j:
+            m=(i+j)//2 # 由于i始终小于j，经过整除2后绝对不会出现tails[m] out of range error
+            if tails[m]<x: # 寻找x在tail中的位置，tail[i-1]<x<=tail[i]
+                i=m+1
+            else:
+                j=m
+        tails[i]=x
+        size=max(i+1,size)
+    return size
+
 if __name__=='__main__':
     print(LongestIncreaseSequence3([1,2,8,7,10,3,4,5,6,4,8,20,0,-1,23]))
