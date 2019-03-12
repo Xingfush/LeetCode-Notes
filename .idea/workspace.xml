@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a9c6db0-510a-47e6-871d-3fff735de8bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LeetCode-Notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LeetCode-Notes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonClass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFunc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RECURSIVE.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeniorProgramming.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/AddParentheses.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/AddParentheses.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/BinarySearch.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/BinarySearch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/EditDistance.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/FindKthLargest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/HeapSort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/InsertSort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/LongestCommonSequence.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/LongestIncreaseSequence.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/LongestIncreaseSequence.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/LongestIncreaseSubsequence.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/LongestIncreaseSubsequence.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/LongestUniqueSubsequence.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/MaxSubarray.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/MaxSubarray.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/MergeSort.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/MergeSort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/MergeSortedArrays.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/MergeSortedArrays.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/PartitionEqualSubset.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/QuickSort.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/QuickSort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/Recursive.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/ShellSort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/TopKFrequent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/TopKth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/TwoSum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/priority_queue.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/queuexf.py" beforeDir="false" />
-    </list>
+    <list default="true" id="6a9c6db0-510a-47e6-871d-3fff735de8bc" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-29" />
     <option name="width" value="1190" />
     <option name="height" value="1038" />
@@ -315,8 +275,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18097754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
