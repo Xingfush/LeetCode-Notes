@@ -1,5 +1,3 @@
-# This file fullfill the implementation of Stack in Python and Some typical problems.
-
 # Implementation of Queue using an Array Circularly
 class Empty(Exception):
     """Error attempting to acess an element from an empty container."""
@@ -40,7 +38,7 @@ class ArrayQueue:
     def enqueue(self,e):
         """Add an element to the back of queue."""
         if self._size==len(self._data):
-            self._resize(2*len(self.data)) # 将队列的尺寸扩大二倍
+            self._resize(2*len(self._data)) # 将队列的尺寸扩大二倍
         avail=(self._front+self._size)%len(self._data) # avail的位置等于front+size，刚好是可以插入的位置
         self._data[avail]=e
         self._size+=1
@@ -92,7 +90,7 @@ class ArrayDeque:
         self._size-=1
         if 0<self._size<len(self._data)//4:
             self._resize(len(self._data)//2)
-        return answer
+        return anwser
 
     def delete_last(self):
         if self.is_empty():
@@ -106,7 +104,7 @@ class ArrayDeque:
 
     def add_first(self,e):
         if self._size==len(self._data):
-            self._resize(2*len(self.data)) # 将队列的尺寸扩大二倍
+            self._resize(2*len(self._data)) # 将队列的尺寸扩大二倍
         avail=(self._front-1)%len(self._data)
         self._data[avail]=e
         self._front=avail
@@ -114,7 +112,7 @@ class ArrayDeque:
 
     def add_last(self,e):
         if self._size==len(self._data):
-            self._resize(2*len(self.data)) # 将队列的尺寸扩大二倍
+            self._resize(2*len(self._data)) # 将队列的尺寸扩大二倍
         avail=(self._front+self._size)%len(self._data)
         self._data[avail]=e
         self._size+=1

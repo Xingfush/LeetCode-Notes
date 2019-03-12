@@ -52,8 +52,43 @@ def MaxSubarray4(array):
             end = i+1
     return start,end
 
+# 使用分治法
+def MaxSubarray5(nums):
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
+    if len(nums)==1:
+        return nums[0]
+    else:
+        mid=len(nums)//2
+        left_sum=MaxSubarray5(nums[:mid])
+        right_sum=MaxSubarray5(nums[mid:])
+        cross_sum=maxcrossSubArray(nums,mid)
+        if left_sum>=right_sum and left_sum>=cross_sum:
+            return left_sum
+        elif right_sum>=left_sum and right_sum>=cross_sum:
+            return right_sum
+        else:
+            return cross_sum
+
+def maxcrossSubArray(nums,mid):
+    left=nums[mid-1] # 注意left的位置，mid-1
+    Sum=0
+    for num in reversed(nums[:mid]):
+        Sum+=num
+        if Sum>left:
+            left=Sum
+    right=nums[mid]
+    Sum=0
+    for num in nums[mid:]:
+        Sum+=num
+        if Sum>right:
+            right=Sum
+    return left+right
+
 # Brute-Force 暴力破解法
-def MaxSubarray5(array):
+def MaxSubarray6(array):
     maxSum = array[0]
     start = 0
     end = 1

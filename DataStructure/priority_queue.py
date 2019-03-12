@@ -13,7 +13,7 @@ class PriorityQueue:
         self._entry_finder={}
     def push(self,item,priority=0):
         if item in self._entry_finder: # 相当于对已有任务更新priority
-            self.remove_item(item)
+            self.remove(item)
         self._index=next(counter)
         entry=[-priority,self._index,item]
         self._entry_finder[item]=entry # 此处字典加入是引用传递，只是dict[item]指向了entry
