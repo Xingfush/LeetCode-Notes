@@ -12,7 +12,7 @@
 def BinarySearch(array,first,last,value):
     # 求下界（x>=value），return first
     # 求上界（x<value），return first-1
-    while first<last:
+    while first<last: 
         mid=first+(last-first)//2
         if array[mid]<value:
             first=mid+1
