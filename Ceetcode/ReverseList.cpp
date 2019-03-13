@@ -4,9 +4,9 @@ ListNode* ReverseList(ListNode* head)
 	while(cur!=nullptr)
 	{
 		// 首先判断是否是最后一个结点
-		post=cur->next;
-		cur->next=pre;
-		pre=cur;
+		post=cur->next; // 记录
+		cur->next=pre; // 调整连接
+		pre=cur; // 更新
 		cur=post;
 	}
 	return pre;
