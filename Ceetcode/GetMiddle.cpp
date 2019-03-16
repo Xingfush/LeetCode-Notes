@@ -9,7 +9,7 @@ int Partition(int*arr, int start, int end)
 {
 	int left = start, right = end;
 	int pivot = arr[end];
-	while (left < right)
+	while (left < right)// 全是left<right
 	{
 		while (left < right && arr[left] < pivot)
 			left++;
@@ -42,6 +42,7 @@ int GetMiddle(int *arr, int size)
 	return arr[mid];
 }
 
+// C++优先队列默认是最小堆，这里将其变为最大堆
 struct Compare
 {
 	int operator()(int left, int right)

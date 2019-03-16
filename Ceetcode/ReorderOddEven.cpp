@@ -2,12 +2,13 @@ void ReorderOddEven(int *pData, unsigned int length)
 {
 	if (pData == nullptr || length == 0)
 		return;
+	
 	int *left = pData, *right = pData + length-1;
 	while (left < right)
 	{
-		while (left<right && *left % 2 == 1) //必须加上left<right
+		while (left<right && *left & 0x1 == 1) //必须加上left<right
 			left++;
-		while (left<right && *right % 2 == 0) //必须加上left<right
+		while (left<right && *right & 0x1 == 0) //必须加上left<right
 			right--;
 		if (left < right)
 		{
