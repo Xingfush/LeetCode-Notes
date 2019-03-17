@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a9c6db0-510a-47e6-871d-3fff735de8bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LeetCode-Notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LeetCode-Notes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peetcode/HeapSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Peetcode/HeapSort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peetcode/InsertSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Peetcode/InsertSort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peetcode/MergeSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Peetcode/MergeSort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peetcode/QuickSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Peetcode/QuickSort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peetcode/ShellSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Peetcode/ShellSort.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -311,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552361201558</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add siftup and siftdown by heap.">
+      <created>1552825636278</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552825636278</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -322,7 +322,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20824295" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20824295" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2592068" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,7 +360,8 @@
     <MESSAGE value="modify HeapSort" />
     <MESSAGE value="Modify some files." />
     <MESSAGE value="update heap files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update heap files" />
+    <MESSAGE value="add siftup and siftdown by heap." />
+    <option name="LAST_COMMIT_MESSAGE" value="add siftup and siftdown by heap." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/leetcode/ShellSort.py" />
