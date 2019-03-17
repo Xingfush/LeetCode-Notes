@@ -7,12 +7,19 @@ def InsertSort(array):
         array[i] = key
     return array
 
+def BubbleSort(array):
+    n = len(array)
+    for i in range(n-1):
+        for j in range(1, n-i):
+            if array[j] < array[j-1]:
+                array[j], array[j-1] = array[j-1],array[j]
+    return array
 
 if __name__ == '__main__':
-    print(InsertSort([-9,10,3,42,7,7,5,2,2,7,-20,23]))
-    print(InsertSort([8,7,6,5,4,3,2,1]))
-    print(InsertSort([1,2,3,4,5,6,7,8]))
-    print(InsertSort([1,1,1,1,1,1,1,1]))
-    print(InsertSort([-1, 2, 7, 1, 10, 1, -5,3]))
-    print(InsertSort([1,0]))
-    print(InsertSort([0]))
+    print(BubbleSort([-9,10,3,42,7,7,5,2,2,7,-20,23]))
+    print(BubbleSort([8,7,6,5,4,3,2,1]))
+    print(BubbleSort([1,2,3,4,5,6,7,8]))
+    print(BubbleSort([1,1,1,1,1,1,1,1]))
+    print(BubbleSort([-1, 2, 7, 1, 10, 1, -5,3]))
+    print(BubbleSort([1,0]))
+    print(BubbleSort([1]))

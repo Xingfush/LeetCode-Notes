@@ -18,17 +18,17 @@ def QuickSort(array, l, r):
 
 # Hoare Scheme
 def partition2(array,l,r):
-    pivot = array[l]
-    left = l +1
+    pivot = array[r]
+    left = l
     right = r
-    while left <= right:
-        while left <= right and array[left] <= pivot:
+    while left < right:
+        while left < right and array[left] < pivot:
             left += 1
-        while left <= right and array[right] >= pivot:
+        while left < right and array[right] >= pivot:
             right -= 1
-        if left <= right:
+        if left < right:
             array[left],array[right] = array[right],array[left]
-    array[l],array[right] = array[right],array[l]
+    array[r],array[right] = array[right],array[r]
     return right
 
 def QuickSort2(array, l, r):
@@ -58,9 +58,10 @@ def QuickSort3(array,l,r):
     return array
 
 if __name__ == '__main__':
-    print(QuickSort3([8,7,6,5,4,3,2,1], 0, 7))
-    print(QuickSort3([1,2,3,4,5,6,7,8], 0, 7))
-    print(QuickSort3([1,1,1,1,1,1,1,1], 0, 7))
-    print(QuickSort3([-1, 2, 7, 1, 10, 1, -5,3], 0, 7))
-    print(QuickSort3([1,0],0,1))
-    print(QuickSort3([1],0,0))
+    print(QuickSort([8,7,6,5,4,3,2,1], 0, 7))
+    print(QuickSort([1,2,3,4,5,6,7,8], 0, 7))
+    print(QuickSort([1,1,1,1,1,1,1,1], 0, 7))
+    print(QuickSort([-1, 2, 7, 1, 10, 1, -5,3], 0, 7))
+    print(QuickSort([1,0],0,1))
+    print(QuickSort([1],0,0))
+    print(QuickSort([],0,-1))

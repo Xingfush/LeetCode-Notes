@@ -1,25 +1,29 @@
-def MaxHeapify(array,n,i):
-    l= 2*i+1
-    r= 2*i+2
-    largest = i
-    if l<=n and array[largest]<array[l]:
-        largest=l
-    if r<=n and array[largest]<array[r]:
-        largest=r
-    if largest != i:
-        array[largest],array[i]=array[i],array[largest]
-        MaxHeapify(array,n,largest)
+def heapify(array,n,i):
+
+	largest = i
+	lchild = 2*i +1
+	rchild = 2*i +2
+
+	if lchild<n and array[lchild]>array[largest]:
+		largest = lchild
+	if rchild<n and array[rchild]>array[largest]:
+		largest = rchild
+
+	if largest!=i:
+		array[largest],array[i] = array[i],array[largest]
+		heapify(array,n,largest)
 
 def HeapSort(array):
-    n = len(array)
-    for i in reversed(range(n//2)):
-        MaxHeapify(array,n-1,i)
-    while n>1:
-        array[n-1],array[0]=array[0],array[n-1]
-        n-=1
-        MaxHeapify(array,n-1,0)
-    return array
 
+	n = len(array)
+	for i in reversed(range(n//2)):
+		heapify(array,n,i)
+
+	while n>1:
+		array[n-1],array[0] = array[0],array[n-1]
+		n -= 1
+		heapify(array,n,0)
+	return array
 
 if __name__ == '__main__':
     print(HeapSort([8,7,6,5,4,3,2,1]))
