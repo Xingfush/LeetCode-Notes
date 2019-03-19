@@ -1,10 +1,17 @@
+/***************************************************************************
+*  @file       main.cpp
+*  @author     MISAYAONE
+*  @date       26  March 2017
+*  @remark     26  March 2017
+*  @theme      Merge Sort
+***************************************************************************/
 #include "stdafx.h"
 #include<iostream>
 #include<vector>
 #include<time.h>
 
 using namespace std;
-static int Max = 7;//自定义的使用插入排序的门限
+int _count = 0;
 
 			   /*第一种方法，传入参数为数组指针，左开右闭*/
 			   //函数作用：合并[left,mid][mid,right]
@@ -32,12 +39,13 @@ void Merge(int a[], int left, int mid, int right)
 	//比较两个序列的重合部分，进行排序
 	while (i<length1 && j<length2)
 	{
-		if (l1[i] < l2[j])
+		if (l1[i] <= l2[j])
 		{
 			a[left++] = l1[i++];
 		}
 		else
 		{
+			_count += length1-i;
 			a[left++] = l2[j++];
 		}
 	}
@@ -61,7 +69,7 @@ void Merge_sort(int a[], int left, int right)
 {
 	if (left + 1 >= right)//一个元素直接返回
 		return;
-	if (left < right)
+	else
 	{
 		int mid = (left + right) / 2;//首先进行分区，然后递归操作
 		Merge_sort(a, left, mid);
@@ -125,11 +133,6 @@ void Merge_sort(vector<int>::iterator begin, vector<int>::iterator end)
 	{
 		return;
 	}
-	//对长度较小的自序列使用插入排序
-	// 	if ((end-begin) <= Max)
-	// 	{
-	// 		Insertion_sort(begin,end);
-	// 	}
 
 	if (begin != end)
 	{
@@ -140,26 +143,27 @@ void Merge_sort(vector<int>::iterator begin, vector<int>::iterator end)
 	}
 }
 
-int main(int argc, char **argv)
-{
-	clock_t Start_time = clock();
-	int a[10] = { 23,56,78,6,59,15,49,81,15,56 };
-	vector<int> vec(a, a + 10);
-	Merge_sort(a, 0, 10);
-	for (size_t i = 0; i != 10; ++i)
-	{
-		cout << a[i] << " ";
-	}
-
-	cout << endl;
-	Merge_sort(vec.begin(), vec.end());//使用迭代器的版本出现的错误很低级，困扰了我一晚上，结果发现是传入的end迭代器是不可访问的
-	for (size_t i = 0; i != 10; ++i)
-	{
-		cout << vec[i] << " ";
-	}
-	cout << endl;
-	clock_t End_time = clock();
-	cout << "Running time is :" << static_cast<double>(End_time - Start_time) / CLOCKS_PER_SEC * 1000 << " ms" << endl;
-	cin.get();
-	return 0;
-}
+//int main(int argc, char **argv)
+//{
+//	clock_t Start_time = clock();
+//	int a[10] = { 2,5,6,8,9,15,1,1,1,1 };
+//	vector<int> vec(a, a + 10);
+//	Merge_sort(a, 0, 10);
+//	for (size_t i = 0; i != 10; ++i)
+//	{
+//		cout << a[i] << " ";
+//	}
+//
+//	cout << endl;
+//	Merge_sort(vec.begin(), vec.end());//使用迭代器的版本出现的错误很低级，困扰了我一晚上，结果发现是传入的end迭代器是不可访问的
+//	for (size_t i = 0; i != 10; ++i)
+//	{
+//		cout << vec[i] << " ";
+//	}
+//	cout << endl;
+//	cout << "逆序对个数：" << _count << endl;
+//	clock_t End_time = clock();
+//	cout << "Running time is :" << static_cast<double>(End_time - Start_time) / CLOCKS_PER_SEC * 1000 << " ms" << endl;
+//	//cin.get();
+//	return 0;
+//}

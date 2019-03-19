@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a9c6db0-510a-47e6-871d-3fff735de8bc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Ceetcode/InversePairs.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Peetcode/getMaxGiftValue.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/LeetCode-Notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LeetCode-Notes.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ceetcode/MergeSort.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ceetcode/MergeSort.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Peetcode/LongestCommonSequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/Peetcode/LongestCommonSequence.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,47 +37,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Peetcode/InsertSort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Peetcode/HeapSort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Peetcode/QuickSort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1450">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Peetcode/BinarySearch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Peetcode/LongestCommonSequence.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Peetcode/getMaxGiftValue.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Peetcode/LongestUniqueSubsequence.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="100">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -91,15 +86,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Peetcode/QuickSort.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Peetcode/HeapSort.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Peetcode/MergeSort.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/DataStructure/myqueue.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Peetcode/BinarySearch.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/DataStructure/priority_queue.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/test.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Peetcode/ShellSort.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Peetcode/InsertSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Peetcode/QuickSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Peetcode/LongestCommonSequence.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/datastructure/myqueue.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Peetcode/LongestUniqueSubsequence.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/datastructure/priority_queue.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Peetcode/ShellSort.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Peetcode/getMaxGiftValue.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Peetcode/BinarySearch.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Peetcode/HeapSort.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -126,11 +124,14 @@
         <option value="$PROJECT_DIR$/Peetcode/MergeSort.py" />
         <option value="$PROJECT_DIR$/Peetcode/HeapSort.py" />
         <option value="$PROJECT_DIR$/Peetcode/QuickSort.py" />
+        <option value="$PROJECT_DIR$/Peetcode/MaxGiftValue.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/Peetcode/LongestCommonSequence.py" />
+        <option value="$PROJECT_DIR$/Peetcode/getMaxGiftValue.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="885" />
     <option name="width" value="1190" />
     <option name="height" value="1048" />
@@ -141,6 +142,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,7 +159,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,7 +176,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.LongestUniqueSubsequence">
     <configuration name="HeapSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode-Notes" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,7 +198,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="InsertSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="LongestCommonSequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode-Notes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -209,7 +210,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Peetcode/InsertSort.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Peetcode/LongestCommonSequence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -218,7 +219,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MergeSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="LongestUniqueSubsequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode-Notes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -230,7 +231,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Peetcode/MergeSort.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Peetcode/LongestUniqueSubsequence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -283,11 +284,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.LongestUniqueSubsequence" />
+        <item itemvalue="Python.LongestCommonSequence" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.QuickSort" />
         <item itemvalue="Python.HeapSort" />
-        <item itemvalue="Python.MergeSort" />
-        <item itemvalue="Python.InsertSort" />
       </list>
     </recent_temporary>
   </component>
@@ -327,15 +328,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18031704" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18018967" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2082153" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2592068" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2516269" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.25813448" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -387,7 +389,7 @@
     <entry file="file://$PROJECT_DIR$/leetcode/heap.md" />
     <entry file="file://$PROJECT_DIR$/leetcode/MergeSortedArrays.py" />
     <entry file="file://$PROJECT_DIR$/leetcode/TopKth.py" />
-    <entry file="file://$PROJECT_DIR$/DataStructure/堆.md">
+    <entry file="file://$PROJECT_DIR$/datastructure/堆.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -409,7 +411,7 @@
     <entry file="file://$PROJECT_DIR$/PythonClass.py" />
     <entry file="file://$PROJECT_DIR$/PythonFunc.py" />
     <entry file="file://$PROJECT_DIR$/queuexf.py" />
-    <entry file="file://$PROJECT_DIR$/DataStructure/mystack.py">
+    <entry file="file://$PROJECT_DIR$/datastructure/mystack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
@@ -422,7 +424,7 @@
     <entry file="file://$PROJECT_DIR$/SeniorProgramming.py" />
     <entry file="file://$PROJECT_DIR$/leetcode/LongestIncreaseSequence.py" />
     <entry file="file://$PROJECT_DIR$/Ceetcode/MergeKLists.cpp" />
-    <entry file="file://$PROJECT_DIR$/DataStructure/priority_queue.py">
+    <entry file="file://$PROJECT_DIR$/datastructure/priority_queue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
@@ -432,7 +434,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataStructure/myqueue.py">
+    <entry file="file://$PROJECT_DIR$/datastructure/myqueue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
@@ -447,17 +449,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Peetcode/MergeSort.py">
+    <entry file="file://$PROJECT_DIR$/Peetcode/BinarySearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="425">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Peetcode/InsertSort.py">
+    <entry file="file://$PROJECT_DIR$/Peetcode/QuickSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="822">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
@@ -468,24 +470,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Peetcode/QuickSort.py">
+    <entry file="file://$PROJECT_DIR$/Peetcode/InsertSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="575">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Peetcode/BinarySearch.py">
+    <entry file="file://$PROJECT_DIR$/Peetcode/MaxGiftValue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="50">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Peetcode/MergeSort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Peetcode/LongestUniqueSubsequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Peetcode/getMaxGiftValue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Peetcode/LongestCommonSequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
