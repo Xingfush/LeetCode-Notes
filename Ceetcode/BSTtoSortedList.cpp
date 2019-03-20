@@ -1,15 +1,12 @@
 /* 同样利用中序遍历 */
 
-int List[100]; //将数组定义为全局变量
-
 // 这里的 count相当于SortListTo BST中的 ListNode* & head一样，必须引用
-void InOrderBST(TreeNode* pRoot, int & count)
+void InOrderBST(TreeNode* pRoot, vector<int> & list)
 {
 	if(pRoot==nullptr)
 		return;
 	InOrderBST(pRoot->left,count);
-	List[count] = pRoot->val;
-	count++;
+	list.push_back(pRoot->val);
 	InOrderBST(pRoot->right,count);
 }
 
@@ -17,13 +14,14 @@ int medianInBST(TreeNode *pRoot)
 {
 	if(pRoot==nullptr)
 		return -1;
-	int count=0;
-	InOrderBST(pRoot,count);
+    vector<int> list;
+	InOrderBST(pRoot,list);
+    int length = list.size();
 
-	if(count & 1==1) // 判断奇偶的方式
-		return List[count/2];
+	if(length & 1==1) // 判断奇偶的方式
+		return list[length/2];
 	else
-		return (List[(count-1)/2]+List[(count+1)/2]);
+		return (list[(length-1)/2]+list[(length+1)/2]);
 }
 
 
@@ -71,5 +69,4 @@ TreeNode* getKthTreeNode(TreeNode* root, int &k) {
 
     return result;
 }
-
 
