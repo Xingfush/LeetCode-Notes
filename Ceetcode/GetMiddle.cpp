@@ -9,7 +9,7 @@ int Partition(int*arr, int start, int end)
 {
 	int left = start, right = end;
 	int pivot = arr[end];
-	while (left < right)// 全是left<right
+	while (left < right)// 全是left<right，终止条件肯定是left撞上了right，而不会是right撞left
 	{
 		while (left < right && arr[left] < pivot)
 			left++;
