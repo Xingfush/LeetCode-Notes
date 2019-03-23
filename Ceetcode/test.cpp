@@ -182,53 +182,270 @@ ListNode* MergeTwoLists(ListNode* a, ListNode* b)
 	return result;
 }
 
+
 int getMedianOfTwoSortedArray(int *list1, int *list2, int length1, int length2)
 {
-	int m = length1, n = length2;
-	int *A = list1, *B = list2;
-	// 保证 m<n
-	if(length1 > length2)
-	{
-		m = length2;
-		n = length1;
-		A = list2;
-		B = list1;
-	}
-	// 没有左闭右开，只有划分[0,i),[i,end),划分点i取值[0,end]=[imin,imax]
-	int imin = 0, imax = m;
-	int halflen = (m+n+1)/2;
-	int max_of_left = 0, max_of_right =0;
+	// 保证 list1 是较短的那个数组
+	if(length1>length2)
+		return getMedianOfTwoSortedArray(list2,list1,length2,length1);
 
-	while(imin<=imax)// 只要还有划分点，注意是两端闭合
+	// 设定较小数组的二分端点
+	int imin = 0, imax = length1;
+	int halflen = length1+length2+1;
+	int max_of_left = 0;
+	int min_of_right = 0;
+
+	// 开始二分遍历
+	while(imin<=imax)
 	{
-		int i = (imin+imax)/2;
-		int j = halflen-i; // 按照定义求j
-		// 情况1，增大i
-		if(i<m && j>0 && B[j-1]>A[i]) // 非临界情况检查: i<m and j>0
-			imin = i+1;
-		else if(i>0 && j<n && A[i-1]>B[j]) 
+		int i = imin+(imax-imin)/2;
+		int j = halflen - i;
+		// 第一种情况
+		if(i>0 && list1[i-1]>list2[j])
 			imax = i-1;
+		else if(i<m && list1[i]<list2[j-1])
+			imin = i+1;
 		else
-		{ // 上面的条件不满足，有6种情况，注意原命题和逆否命题
+		{
 			if(i==0)
-				max_of_left=B[j-1];
+				max_of_left = list2[j-1];
 			else if(j==0)
-				max_of_left=A[i-1];
+				max_of_left = list1[i-1];
 			else
-				max_of_left=max(A[i-1],B[j-1]);
+				max_of_left = max(list1[i-1],list2[j-1]);
 
-			if((m+n) & 1==1)
+			if((length1+length2) & 1==1)
 				return max_of_left;
-			if(i==m)
-				min_of_right=B[j];
-			if(j==n)
-				min_of_right=A[i]
-			else
-				min_of_right=min(A[i],B[j])
 
+			if(i==m)
+				min_of_right = list2[j];
+			else if(j==n)
+				min_of_right = list1[i];
+			else
+				min_of_right = min(list1[i],list2[j]);
 			return (max_of_left+min_of_right)/2.0;
 		}
 	}
+	return 0;
+}
+
+int getTopKofTwoSortedArrays(int * list1, int length1, int* list2, int length2, int k)
+{
+	// 保证list1 是较短的
+	if(length1>length2)
+		return getTopKofTwoSortedArrays(list2, length2, list1, length1, k);
+
+	if(length1==0)
+		return list2[k-1];
+	if(k==1)
+		return min(list1[0],list2[0]);
+
+	// 开始划分
+	int k1 = min(k/2,length1);
+	int k2 = k-k1;
+	// 分治法
+	if(list1[k1-1]<list2[k2-1])
+		return getTopKofTwoSortedArrays(list1+k1,length1-k1, list2, length2, k-k1);
+	else if(list1[k1-1]>list2[k2-1])
+		return getTopKofTwoSortedArrays(list1,length1, list2+k2, length2-k2, k-k2);
+	else
+		return list1[k1-1];
+}
+
+int partition(int *arr, int left, int right)
+{
+	int pivot = arr[right];
+	int start = left;
+	int end = right; // 内部是左闭右开
+	while(start<end)
+	{
+		while(start<end && arr[start]<pivot)
+			start--;
+		while(start<end && arr[end]>=pivot)
+			end--;
+		if(start<end)
+			swap(arr[start],arr[end]);
+	}
+	swap(arr[end],arr[right]);
+	return end;
+}
+
+
+int GetMiddle(int *arr, int size)
+{
+	if(arr==nullptr||size==0)
+		return -1;
+
+	int start = 0;
+	int end = size-1;
+	int mid = size/2;
+	int div = partition(arr, start, end);
+
+	while(div!=mid)
+	{
+		if(div<mid)
+			div = partition(arr, div+1, end);
+		else
+			div = partition(arr, start, div-1);
+	}
+	return div;
+}
+
+struct mycompare
+{
+	bool operator()(int left, int right){
+		return left>right;
+	}
+};
+
+int getMedian(int *arr, int size)
+{
+	if(arr==nullptr ||size==0)
+		return -1;
+
+	priority_queue<int, vector<int>, mycompare> queue;
+	int halflen = size/2;
+	for(int i =0;i<halflen;i++)
+	{
+		queue.push(arr[i]);
+	}
+	for(int i=halflen;i<size;i++)
+	{
+		if(arr[i]>queue.top())
+		{
+			queue.pop();
+			queue.push(arr[i]);
+		}
+	}
+	if(!queue.empty())
+		return queue.top();
+}
+
+ListNode* MergeTwoLists(ListNode* a, ListNode* b)
+{
+	if(a==nullptr)
+		return b;
+	if(b==nullptr)
+		return a;
+
+	ListNode* pNode=nullptr;
+	if(a->val<b->val)
+	{
+		pNode = a;
+		pNode->next=MergeTwoLists(a->next,b);
+	}
+	else
+	{
+		pNode = b;
+		pNode->next =MergeTwoLists(a,b->next);
+	}
+	return pNode;
+}
+
+ListNode* MergeKLists(vector<ListNode*> lists)
+{
+	int nums = lists.size();
+	int last = nums-1;
+
+	while(last!=0)
+	{
+		int i =0,j=last;
+		while(i<j)
+		{
+			lists[i]=MergeTwoLists(lists[i],list[j]);
+			i++;
+			j--;
+			if(i<=j)
+				last=j;
+		}
+	}
+	return lists[0];
 
 }
+
+struct mycompare{
+	bool opeartor()(const ListNode* l1, const ListNode* l2){
+		return l1->val>l2->val;
+	}
+}
+
+ListNode* MergeKLists(vector<ListNode*> lists)
+{
+	if(lists==nullptr||lists.size()==0)
+		return nullptr;
+
+	priority_queue<ListNode*,vector<ListNode*>,mycompare> q;
+	for (auto l:lists)
+	{
+		if(l!=nullptr)
+			q.push(l);
+	}
+	if(q.empty())
+		return nullptr;
+	ListNode* result = q.top();
+	ListNode* tail = result;
+
+	while(!q.empty())
+	{
+		tail->next = q.top();
+		q.pop();
+		tail=tail->next;
+		if(tail->next!=nullptr)
+			q.push(tail->next);
+	}
+	return result;
+}
+
+
+TreeNode* SortedListToBST(ListNode* & head, int n)
+{
+	if(n==0)
+		return nullptr;
+
+	TreeNode* left = SortedListToBST(head->left, n/2);
+	TreeNode* root = new TreeNode(head->val);
+	root->left = left;
+	head = head->next;
+	root->right = SortedListToBST(head->right, n-n/2-1);
+	return root;
+}
+
+int count(ListNode* head){
+	return (head)?1+count(head->next):0;
+}
+
+TreeNode* SortedListToBST(ListNode* head, ListNode* end)
+{
+	if(head==end)
+		return nullptr;
+
+	ListNode* slow=head,* fast=head;
+	while(fast!=end && fast->next!=end)
+	{
+		slow=slow->next;
+		fast=fast->next->next;
+	}
+	TreeNode* root=new TreeNode(slow->val);
+	root->left = SortedListToBST(head,slow);
+	root->right = SortedListToBST(slow->next,end);
+	return root;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

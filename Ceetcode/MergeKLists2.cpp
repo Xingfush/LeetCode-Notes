@@ -34,9 +34,10 @@ Node* mergeKLists(vector<Node*> &lists)
 		tail->next=q.top(); // 只有这一句话是真正改变结点指向，构建新链表的
 		q.pop();
 		tail=tail->next;
-		if(tail->next)
+		if(tail->next) // 入队的时候一定要事先检查
 			q.push(tail->next);
 	}
+	return result;
 
 }
 
