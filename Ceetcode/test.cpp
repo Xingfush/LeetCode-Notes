@@ -51,6 +51,24 @@ TreeNode* build(vector<int> &inorder, int i,int j,vector<int> &postorder,int ii,
 	root->right = build(inorder,i+dist+1,j,postorder,ii+dist,jj-1);
 }
 
+TreeNode* build(int *inorder, int i, int j, int *postorder, int ii, int jj)
+{
+	if(i>j || ii>jj)
+		return nullptr;
+
+	int rootVal = postorder[jj];
+	TreeNode* root = new TreeNode(rootVal);
+	int split = 0;
+	for(int k=i;k<=j;k++)
+	{
+		if(inorder[k]==rootVal)
+			split = k;
+	}
+	dist = split-i;
+	build(inorder,i,i+dist-1,postorder,ii,ii+dist-1);
+	build(inorder,i+dist+1,j,postorder,ii+dist,jj-1);
+}
+
 bool hasPathSum(TreeNode* root, int sum)
 {
 	if(root==nullptr)
@@ -430,21 +448,6 @@ TreeNode* SortedListToBST(ListNode* head, ListNode* end)
 	root->right = SortedListToBST(slow->next,end);
 	return root;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

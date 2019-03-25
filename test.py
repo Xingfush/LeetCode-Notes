@@ -1,20 +1,26 @@
-def getMaxGiftValue(array):
-    m = len(array)
-    n = len(array[0])
-    maxValues = [ 0 for i in range(n)]
+def threeSum(nums):
+    """
+    :type nums: List[int]
+    :rtype: List[List[int]]
+    """
+    if len(nums) < 3:
+        return []
+    nums.sort()
+    res = []
+    n = len(nums)
+    for i in range(0,n-2):
+        if i>0 and nums[i]==nums[i-1]:
+            continue
+        temp = set()
+        for j in range(i+1,n):
+            if j>i+1 and nums[j]==nums[j-1]:
+                continue
+            if nums[j] in temp:
+                res.append([nums[i],nums[j],-nums[i]-nums[j]])
+            else:
+                temp.add(-nums[i]-nums[j])
+    return res
 
-    for i in range(m):
-        for j in range(n):
-            left = 0
-            up = 0
-            if i>0:
-                up = maxValues[j]
-            if j>0:
-                left = maxValues[j-1]
-            maxValues[j] = max(left,up)+array[i][j]
-
-    return maxValues[-1]
 
 if __name__ == "__main__":
-    values = [[1,10,3,8],[12,2,9,6],[5,7,4,11],[3,7,16,5]]
-    print(getMaxGiftValue(values))
+    print(threeSum([0,0,0,0]))
