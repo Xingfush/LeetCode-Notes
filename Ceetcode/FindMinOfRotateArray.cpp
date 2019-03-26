@@ -26,9 +26,9 @@ int MinOfRotateArray(int *arr, int length)
 		int mid = (left + right) / 2;
 		if (arr[mid] == arr[right] && arr[mid] == arr[left]) //三点相等的特殊情况
 			return MinInOrder(arr, left, right);
-		if (arr[mid] <= arr[right])
+		if (arr[mid] <= arr[right]) // arr[mid]<=arr[right]一定确定mid位于右区间
 			right = mid;
-		else
+		else // 不在右区间，那么肯定在左区间，由arr[mid]>=arr[left]一定确定位于左区间
 			left = mid;
 	}
 	return arr[mid];
