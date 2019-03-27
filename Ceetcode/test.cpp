@@ -500,4 +500,96 @@ ListNode* removeElement(ListNode* head, int val)
 	return head;
 }
 
+TreeNode* Construct(int *preorder, int *inorder, int length)
+{
+	if(preorder==nullptr||inorder==nullptr||length<=0)
+		return nullptr;
+	return  ConstructCore(preoder, 0, length-1, 0, length-1);
+}
 
+TreeNode* ConstructCore(int *preoder, int i, int j, int *inoder, int ii, int jj)
+{
+	if(i>=j || ii>=jj)
+		return nullptr;
+	int rootVal = preoder[i];
+	int rootInd
+	for(int k=ii;k<=jj;k++)
+	{
+		if(inorder[k]==rootVal)
+			rootInd=k;
+	}
+	dist = rootInd-ii;
+	TreeNode* root = new TreeNode(root->val);
+	root->left = ConstructCore(preoder, i+1, i+dist-1, inorder, ii, ii+dist-1);
+	root->right = ConstructCore(preoder, i+dist, j, inorder, ii+dist+1,jj);
+	return root;
+}
+
+unsigned int getLength(ListNode* pHead){
+	return (pHead==nullptr)?0:1+getLength(pHead->next);
+}
+
+ListNode* FindFirstCommonNode(ListNode* pHead1, ListNode* pHead2)
+{
+	unsigned lenght1 = getLength(pHead1);
+	unsigned lenght2 = getLength(pHead2);
+
+	if(lenght1>lenght2)
+		return FindFirstCommonNode(pHead2, pHead1);
+
+	unsigned diff = lenght2 - lenght1;
+	for(int i=0;i<diff;i++)
+		pHead2=pHead2->next;
+
+	while(pHead1!=nullptr && pHead2!=nullptr && pHead1!=pHead2)
+	{
+		pHead1 = pHead1->next;
+		pHead2 = pHead2->next;
+	}
+	return pHead1;
+
+bool GetNodePath(TreeNode* root, TreeNode* pNode, vector<TreeNode*> & path)
+{
+	if(root==pNode)
+		return true;
+
+	path.push_back(root);
+
+	bool found= false;
+	if(root->left!=nullptr)
+		found = GetNodePath(root->left, pNode, path);
+	if(found==false && root->right!=nullptr)
+		found = GetNodePath(root->right, pNode, path);
+	path.pop_back();
+
+	return found;
+}
+
+TreeNode* GetLastCommonNode(vector<TreeNode*>& path1, vector<TreeNode*>& path2)
+{
+	TreeNode* pLast = nullptr;
+	auto iter1 = path1.begin();
+	auto iter2 = paht2.begin();
+	while(iter1!=nullptr && iter2!=nullptr)
+	{
+		if(*iter1 == *iter2)
+			pLast = *iter1;
+		iter1++,iter2++;
+	}
+	
+	return pLast;
+}
+
+TreeNode* GetLastCommonParent(TreeNode* root, TreeNode* pNode1, TreeNode* pNode2)
+{
+	if(root==nullptr||pNode1==nullptr||pNode2==nullptr)
+		return nullptr;
+
+	vector<TreeNode*> path1;
+	GetNodePath(root, pNode1, path1);
+	vector<TreeNode*> path2;
+	GetNodePath(root, pNode2, path2);
+
+	return GetLastCommonNode(path1, paht2);
+
+}
