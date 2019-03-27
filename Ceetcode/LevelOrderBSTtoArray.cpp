@@ -27,3 +27,6 @@ vector<vector<int> > levelOrder(TreeNode *root) {
     }
     return result;
 }
+
+// int k = q.size(); // 这两句的写法简直是伟大的发明，用来层次遍历，每一层都可以标记
+// for(int i=0;i<k;i++) // 

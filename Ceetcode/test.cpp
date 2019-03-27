@@ -449,6 +449,55 @@ TreeNode* SortedListToBST(ListNode* head, ListNode* end)
 	return root;
 }
 
+ListNode* removeElements(ListNode* head, int val) {
+	if(head==nullptr)
+		return nullptr;
+	ListNode* front = new ListNode(0);
+	front->next = head;
+	ListNode* pre=front, *cur=head;
 
+	while(cur!=nullptr)
+	{
+		if(cur->val==value)
+		{
+			ListNode* temp=cur;
+			pre->next=cur->next;
+			cur = cur->next;
+			delete temp;
+		}
+		else{
+			pre=cur;
+			cur=cur->next;
+		}
+	}
+
+	return front->next;
+} // 删除所有的元素
+
+ListNode* removeElement(ListNode* head, int val)
+{
+	if(head==nullptr)
+		return nullptr;
+
+	ListNode* pDeleted = nullptr;
+	if(head->val==value)
+	{
+		pDeleted=head;
+		head=head->next;
+	}
+	else{
+		ListNode* pNode=head;
+		while(pNode->next!=nullptr && pNode->next->val!=value)
+			pNode=pNode->next;
+		if(pNode->next!=nullptr) // 终止判别
+		{
+			pDeleted = pNode->next;
+			pNode->next=pNode->next->next;
+		}
+	}
+	if(pDeleted!=nullptr)
+		delete pDeleted;
+	return head;
+}
 
 
