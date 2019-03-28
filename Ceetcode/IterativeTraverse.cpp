@@ -193,6 +193,31 @@ void postOrderTraverse(TreeNode* root)
 	cout << endl;
 }
 
+// 这个版本尤其注意，完全不动，因为当把root换为node之后，出现time exceed limits错误
+// 尚未查出原因
+vector<int> postorderTraversal(TreeNode* root) {
+    vector<int> nodes;
+    stack<TreeNode*> todo;
+    TreeNode* last = NULL;
+    while (root || !todo.empty()) {
+        if (root) {
+            todo.push(root);
+            root = root -> left;
+        } else {
+            TreeNode* node = todo.top();
+            if (node -> right && last != node -> right) {
+                root = node -> right;
+            } else {
+                nodes.push_back(node -> val);
+                last = node;
+                todo.pop();
+            }
+        }
+    }
+    return nodes;
+}
+
+
 /* 使用队列访问 */
 /* 使用队列完成层序遍历 */
 void layerOrderTraverse(TreeNode* root)
