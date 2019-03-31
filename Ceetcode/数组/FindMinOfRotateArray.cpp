@@ -13,7 +13,7 @@ int MinOfRotateArray(int *arr, int length)
 {
 	if (length <= 1)
 		return arr[0];
-	int left = 0;
+	int left = 0;  
 	int right = length - 1;
 	int mid = left;
 	while (arr[left] >= arr[right])

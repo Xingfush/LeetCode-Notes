@@ -301,6 +301,263 @@ bool searchMatrix(vector<vector<int>>& matrix, int target)
 	return false;
 }
 
-bool 
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2)
+{
+	int length1 = nums1.size(), length2 = nums2.size();
+	if(length1>length2)
+		return findMedianSortedArrays(nums2, nums1);
 
+	int imin =0, imax = length1;
+	int halfLen = (length1+length2+1)/2;
+	int max_of_left, min_of_right;
+	while(imin<=imax)
+	{
+		int i=(imin+imax)/2;
+		int j = halfLen-i;
+		if(i>0 && nums1[i-1]>nums2[j])
+			right = i-1;
+		else if(i<length1 && nums1[i]<nums2[j-1])
+			left = i+1;
+		else
+		{
+			if(i==0)
+				max_of_left = nums2[j-1];
+			else if(j==0)
+				max_of_left = nums1[i-1];
+			else
+				max_of_left = max(nums1[i-1],nums2[j-1]);
+			if((length1+length2) & 1==1)
+				return max_of_left;
+			
+			if(i==m)
+				min_of_right = nums2[j];
+			else if(j==n)
+				min_of_right = nums1[i];
+			else
+				min_of_right = min(nums1[i],nums2[j]);
+			return (min_of_right+max_of_left)/2.0;
 
+		}
+	}
+}
+ 
+double findTopKofSortedArrays(int* array1, int len1, int* array2, int len2, int k)
+{
+	if(len1>len2)
+		return findTopKofSortedArrays(array2, len2, array1, len1);
+	if(len1==0)
+		return array2[k-1]; // K 不可能小于等于0，保证K必须大于0，初始条件可以保证
+	if(k==1)
+		return min(array1[0],array2[0]);
+
+	int k1 =min(k/2,len1); // k1 至少为1
+	int k2 = k-k1;
+	if(array1[k1-1]<array2[k2-1])
+		return findTopKofSortedArrays(array1+k1,len1-k1,array2,len2,k-k1);
+	else if(array1[k1-1]>array2[k2-1])
+		return findTopKofSortedArrays(array1,len1,array2+k2,len2-k2,k-k2);
+	else
+		return array1[k1-1];
+}
+
+void QuickSort(int* array, int start, int end)
+{
+	if(start<end)
+	{
+		int k = partition(array, start, end);
+		QuickSort(array, start, k-1);
+		QuickSort(array, k+1, end);
+	}
+}
+
+int partition(int* array, int start, int end)
+{
+	int left = start, right = end;
+	int pivot = array[end];
+	while(left<right)
+	{
+		while(left<right && array[left]<pivot)
+			left++;
+		while(left<right && array[right]>=pivot)
+			right--;
+		if(left<right)
+			swap(array[left],array[right]);
+	}
+	swap(array[right],array[end]);
+	return right;
+}
+
+string findLongestPalindrome2(string & s)
+{
+	int start = 0;
+	int maxLen = 1;
+	int length = s.size();
+	bool **PalindRecord =new bool*[length];
+	for(int i=0;i<length;i++)
+	{
+		PalindRecord[i] = new bool[length];
+		memset(PalindRecord[i],0,sizeof(bool)*length);
+	}
+	for(int i=0;i<length;i++)
+	{
+		PalindRecord[i][i]=true;
+		if(i<length-1 && s[i]==s[i+1])
+		{
+			PalindRecord[i][i+1]=true;
+			maxLen=2;
+			start=i;
+		}
+	}
+	for(int len=3;len<=length;len++)
+	{
+		for(int i=0;i<=length-len;i++)
+		{
+			int j=i+len-1;
+			if(s[j]==s[i] && PalindRecord[i+1][j-1])
+			{
+				maxLen=len;
+				start=i;
+				PalindRecord[i][j]=true;
+			}
+		}
+	}
+	return s.substr(start,maxLen);
+}
+
+string findLongestPalindrome2(string & s)
+{
+	int length = s.size();
+	int maxLen =1;
+	int k =0;
+	for(int i=0;i<length-1;i++)
+	{
+		for(int j=i+1;j<length;j++)
+		{
+			int start =i, end =j;
+			while(start<end)
+			{
+				if(s[start]==s[end])
+					start++,end--;
+				else
+					break;
+			}
+			if(start==end && j-i+1>maxLen)
+			{
+				maxLen = j-i+1;
+				k = i;
+			}
+		}
+	}
+}
+
+int longestPalindromeSubseq3(string & s)
+{
+	int length = s.size();
+	int **PalindRecord = new int*[length];
+	for(int i=0;i<length;i++)
+	{
+		PalindRecord[i] = new int[length]();
+	}
+	for(int i=0;i<length;i++)
+	{
+		PalindRecord[i][i] =1;
+	}
+	for(int i=length-1;i>=0;i--)
+	{
+		for(int j=i+1;j<length;j++)
+		{
+			if(s[j]==s[i])
+				PalindRecord[i][j]=PalindRecord[i+1][j-1]+2;
+			else
+				PalindRecord[i][j]=max(PalindRecord[i+1][j],PalindRecord[i][j-1]);
+		}
+	}
+
+	for(int i=0;i<length;i++)
+		delete []PalindRecord[i];
+	delete []PalindRecord;
+
+	return PalindRecord[length-1][length-1];
+}
+
+int longestPalindromeSubseq3(string & s)
+{
+	int length = s.size();
+	int * dp = new int[length]();
+	int * dp1 = new int[length]();
+
+	for(int i=length-1;i>=0;i--)
+	{
+		dp[i]=1;
+		for(int j=i+1;j<length;i++)
+		{
+			dp[j]=(s[j]==s[i])?dp1[j-1]+2:max(dp1[j],dp[j-1]);
+		}
+		swap(dp,dp1);
+		memset(dp1,0,sizeof(int)*length);
+	}
+	result = dp1[length-1];
+
+	delete [] dp;
+	delete [] dp1;
+	return result;
+}
+
+int MinOfRotateArray(int *arr, int length)
+{
+	int start =0;
+	int end = length-1;
+	int result =0;
+	while(arr[start]>=arr[end])
+	{
+		if(end-start==1)
+		{
+			result=arr[start];
+			break;
+		}
+		int mid = (start+end)/2;
+		if(arr[mid]==arr[start] && arr[start]==arr[end])
+		{
+			int result = arr[start];
+			for(int i=start+1;i<end;i++)
+			{	
+				if(result>arr[i])
+					result=arr[i]
+			}
+			return result;
+		}
+		if(arr[mid]<=arr[end])
+			end=mid;
+		else
+			start=mid;
+	}
+	return arr[mid];
+}
+
+bool SearchInRotateArray2(int* arr, int length, int target)
+{
+	int start =0,end =length-1;
+	while(start<=end)
+	{
+		int mid =(start+end)/2;
+		if(arr[mid]==target)
+			return true;
+		if(arr[mid]<arr[end])
+		{
+			if(arr[mid]<target && arr[end]>=target)
+				start=mid+1;
+			else
+				end=mid-1;
+		}
+		else if(arr[mid]>arr[start])
+		{
+			if(arr[mid]>target && target>=arr[start])
+				end =mid-1;
+			else
+				start =mid+1;
+		}
+		else
+			end--;
+	}
+	return false;
+}

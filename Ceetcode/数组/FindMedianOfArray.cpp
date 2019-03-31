@@ -7,7 +7,8 @@ using namespace std;
 
 int Partition(int*arr, int start, int end)
 {
-	int left = start, right = end;
+	int left = start, right = end; 
+	// 这里一定是right=end，而不是right=end-1，因为当初始start=end时会出错
 	int pivot = arr[end];
 	while (left < right)// 全是left<right，终止条件肯定是left撞上了right，而不会是right撞left
 	{
@@ -42,7 +43,7 @@ int GetMiddle(int *arr, int size)
 	return arr[mid];
 }
 
-// C++优先队列默认是最小堆，这里将其变为最大堆
+// C++优先队列默认是大顶堆，也就是队头元素最大，这里将其变为小顶堆
 struct Compare
 {
 	int operator()(int left, int right)

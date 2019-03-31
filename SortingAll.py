@@ -1,7 +1,7 @@
 def partition(array,left,right): # two ends are all close
 	
 	start = left
-	end = right 
+	end = right # end 一定是从 right开始，当left=right时，right-1没有意义
 	pivot = array[right]
 
 	while(start<end):
