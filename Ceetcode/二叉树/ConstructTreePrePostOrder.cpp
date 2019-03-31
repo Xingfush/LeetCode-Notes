@@ -20,3 +20,5 @@ Loop on pre array and construct node one by one.
 stack save the current path of tree.
 node = new TreeNode(pre[i]), if not left child, add node to the left. otherwise add it to the right.
 If we meet a same value in the pre and post, it means we complete the construction for current subtree. We pop it from stack.*/
+
+/*1.按照前序数组进行遍历；2. */
