@@ -23,24 +23,25 @@ int Partition(int*arr, int start, int end)
 	return left;
 }
 
-int GetMiddle(int *arr, int size)
+int findMedian(vector<int>& nums)
 {
-	if (arr == nullptr || size == 0)
-		return NULL;
-	if (size == 1)
-		return arr[0];
-	
-	int start = 0, end = size-1;
-	int mid = start + size / 2;
-	int div = Partition(arr, start, end);
-	while (div != mid)
+	int k = (nums.size() - 1) >> 1;
+	int left = 0, right = nums.size() - 1;
+	int result=0;
+	while (true)
 	{
-		if (div < mid)
-			div = Partition(arr, div + 1, end);
+		int q = partition(nums, left, right);
+		if (q == k)
+		{
+			result = nums[q];
+			break;
+		}
+		else if (q < k)
+			left = q + 1;
 		else
-			div = Partition(arr, start, div - 1);
+			right = q - 1;
 	}
-	return arr[mid];
+	return result;
 }
 
 // C++优先队列默认是大顶堆，也就是队头元素最大，这里将其变为小顶堆

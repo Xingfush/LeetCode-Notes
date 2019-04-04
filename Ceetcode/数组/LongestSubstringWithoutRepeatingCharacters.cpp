@@ -13,7 +13,7 @@ int lengthOfLongestSubstring(string s)
 		{
 			if(map[s[start++]]-->1)
 				counter--; // 这里只要是左移碰到重复的元素就counter
-		}
+		} 
 		len = max(len, end-start); // 这里始终是左闭右开
 	}
 	return len;

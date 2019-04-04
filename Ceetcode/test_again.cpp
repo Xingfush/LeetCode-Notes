@@ -422,4 +422,43 @@ void ShellSort(int* array, int length)
 	}
 }
 
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode *p, TreeNode* q)
+{
+	TreeNode* pCur = root, pLast = nullptr, result=nullptr;
+	vector<TreeNode*> pathp, pathq, temp;
+	while(pathp.empty() || pathq.empty()){
+		if(pCur!=nullptr)
+		{
+			temp.push_back(pCur);
+			if(pCur==p) pathp = temp;
+			if(pCur==q) pathq = temp;
+			pCur=pCur->left;
+		}
+		else{
+			if(temp.back()->right==nullptr || temp.back()->right==pLast){
+				pLast = temp.back();
+				temp.pop_back();
+			}
+			else{
+				pCur = temp.back()->right;
+			}
+		}
+	}
+	int n = min(pathp.size(),pathq.size());
+	for(int i=0;i<n;i++)
+	{
+		if(pathp[i]==pathq[i]) result = pathp[i]
+	}
+	return result;
+}
 
+int maxSubarray(int *array, int length)
+{
+	int max_end_here = array[0];
+	int max_so_far = array[0];
+	for(int i=1;i<length;i++){
+		max_end_here = max(max_end_here+array[0],array[0]);
+		max_so_far = max(max_end_here,max_so_far);
+	}
+	return max_so_far;
+}

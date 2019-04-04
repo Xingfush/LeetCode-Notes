@@ -13,12 +13,12 @@ int findSubstring(string s)
     for() { /* initialize the hash map here*/ }
     while(end<s.size())
     {
-        if(map[s[end++]]-- ?) { /* modify counter here */ }
+        if(map[s[end++]]++ ?) { /* modify counter here */ }
         while(/* counter condition */)
         {
             /* update len if finding minimum */
             // increase start to make it invalid/valid again
-            if(map[s[start++]]++ ?)
+            if(map[s[start++]]-- ?)
             { /*modify counter here*/ }
         }
         /*update len here if finding maximum*/

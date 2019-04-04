@@ -39,7 +39,7 @@ bool getNodePath(TreeNode* root, TreeNode* pNode,vector<TreeNode*> &path){
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         TreeNode *cur=root,*last=nullptr;
         vector<TreeNode*> pathp,pathq,temp;
-        
+         
         while (pathp.empty() || pathq.empty()) {// 全部找到了
             
             // 标准的后序遍历过程
