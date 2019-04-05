@@ -32,8 +32,6 @@ vector<int> maxSubArray(vector<int>& nums){
 			end = i;
 		}
 	}
-	vector<int> result(2,0);
-	result[0] = start;
-	result[1] = end;
-	return result;
+
+	return {start,end}; // C++ 11的新规定，可以返回花括号列表用于初始化vector对象，注意，千万不是数组
 }
