@@ -15,7 +15,7 @@ int MinOfRotateArray(int *arr, int length)
 		return arr[0];
 	int left = 0;  
 	int right = length - 1;
-	int mid = left;
+	int mid = left; // 防止出现没有旋转的情况，这样可以直接返回 arr[mid]=arr[0]。
 	while (arr[left] >= arr[right])
 	{
 		if (right - left == 1)

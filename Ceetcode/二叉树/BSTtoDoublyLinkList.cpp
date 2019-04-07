@@ -6,7 +6,7 @@ TreeNode* Convert(TreeNode* root){
 	TreeNode* pHead = pLastNode;
 	while(pHead!=nullptr && pHead->left!=nullptr)
 		pHead = pHead->left;
-
+                       
 	return pHead;
 
 }

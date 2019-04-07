@@ -2,7 +2,7 @@ int minPathSum(vector<vector<int>>& grid) {
     if(grid.size()==0 || grid[0].size()==0)
         return 0;
     int m =grid.size(), n=grid[0].size();
-    int res=0;
+
     vector<int> dp(n,INT_MAX);
     dp[0]=0;
     for(int i=0;i<m;i++){

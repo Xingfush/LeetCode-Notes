@@ -15,3 +15,5 @@ bool wordBreak(string s, vector<string>& wordDict) {
     }
     return dp[n];
 }
+
+//j=0的时候 dp[0],s.substr(0,i=size) 和 j=i, dp[i], s.substr(i,0) 是等效的，都是判断 s[0,i-1] 是不是在字典里。

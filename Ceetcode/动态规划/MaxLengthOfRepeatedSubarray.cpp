@@ -6,23 +6,17 @@
    		dp[i][j]=0 
    	时间复杂度为o(mn),空间复杂度为O(min(m,n))，这里由于有对角线的元素关系，所以必须使用两个状态数组，进行滚动*/
 int findLength(vector<int>& A, vector<int>& B) {
-    int m=A.size(),n=B.size();
-    vector<int> dp(n+1,0); // 两个状态数组，进行滚动
+    int m=A.size(), n=B.size();
+    vector<int> dp(n+1,0);
     vector<int> dp2(n+1,0);
-    int res = 0;
-    for(int i=0;i<m;i++)
-    {
-        for(int j=1;j<n+1;j++)
-        {
-            if(A[i]==B[j-1]) // 这里必须多一个元素，初始化边界条件
-            {
-                dp[j]=dp2[j-1]+1;
-                res=max(res,dp[j]); // 实时记录最大的res
-            }
-            else
-                dp[j]=0; // 一定要赋值为0，为下一阶段清理
+    int res =0;
+    for(int i=1;i<=m;i++){
+        for(int j=1;j<=n;j++){
+            dp[j]=(A[i-1]==B[j-1])?dp2[j-1]+1:0;
+            res = max(res,dp[j]);
         }
-        swap(dp,dp2); // 滚动更新常用手段，使用STL swap函数。
+        swap(dp,dp2);
     }
     return res;
+
 }

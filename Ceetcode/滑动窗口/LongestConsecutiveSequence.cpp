@@ -6,7 +6,7 @@ int LongestConsecutiveSeq(vector<int>& nums)
 	unordered_set<int> s(nums.begin(),nums.end()); // set的初始化方式，数组变集合
 	for(int val:nums)
 	{
-		if(!s.count()) // 使用count函数来判定是否存在
+		if(!s.count(val)) // 使用count函数来判定是否存在
 			continue; // 如果已经访问过，那么直接跳过
 		s.erase(val);
 		int pre = val-1;

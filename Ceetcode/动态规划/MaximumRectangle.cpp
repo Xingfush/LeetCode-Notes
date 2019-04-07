@@ -35,7 +35,7 @@ int largestRectangleArea(vector<int> &height){
 
 /* 题目2：经典的 maximum rectangle */
 // 解法1：结合上面的最大直方图矩形面积
-int maximalRectangle(vector<std::vector<char> &matrix){
+int maximalRectangle(vector<std::vector<char>> &matrix){
 	int res = 0;
 	int m = matrix.size(), n=matrix[0].size();
 	vector<int> height(n,0);
