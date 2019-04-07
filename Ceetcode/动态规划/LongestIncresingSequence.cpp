@@ -4,7 +4,6 @@
 int lengthOfLIS(vector<int>& nums) {
     if(nums.size()==0)
         return 0;
-    int res = 1;
     vector<int> tailTable;
     tailTable.push_back(nums[0]);
     for(int num:nums)
@@ -23,7 +22,6 @@ int lengthOfLIS(vector<int>& nums)
 {
     if(nums.size()==0)
         return 0;
-    int res = 1;
     vector<int> tailTable;
     tailTable.push_back(nums[0]);
 

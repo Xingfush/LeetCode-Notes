@@ -27,8 +27,8 @@ int maxProfit(int k, vector<int>& prices) {
         int temp = dp[0]-prices[0];
         for(int j=1;j<n;j++){
             int dp_temp = dp[j];
-            dp[j]=max(dp[j-1],temp+prices[j]);
-            temp = max(temp,dp_temp-prices[j]);
+            dp[j]=max(dp[j-1],temp+prices[j]); // 更新 dp[j] 使用的是上个 j-1 的最大 max temp
+            temp = max(temp,dp_temp-prices[j]); // temp 的更新比 dp[j]要慢，意思就是 temp = dp[i-1,j-1]-prices[j]中的 j始终小于j
         }
     }
     return dp[n-1];

@@ -5,10 +5,12 @@ int numDecodings(string s) {
         return 0;
     vector<int> dp(s.size()+1,0);
     dp[0]=1;
-    for(int i=1;i<s.size()+1;i++){
+    for(int i=1;i<=s.size();i++){
         dp[i]=(s[i-1]=='0')?0:dp[i-1];
         if(i>1 && (s[i-2]=='1' || (s[i-2]=='2' && s[i-1]<='6')))
             dp[i] +=dp[i-2];
     }
     return dp.back();
 }
+
+// 这里的条件是 ‘0’不可解译，只有 1-26才可解译。
