@@ -26,7 +26,7 @@ void combinationSum(vector<int> & candidates, int target,
 		combination.push_back(candidates[i]);
 		combinationSum(candidates, target-candidates[i], result, combination, i);
 		// 继续搜索的 begin 从i 开始，表示元素可以重复使用
-		combination.pop_back(candidates[i]);
+		combination.pop_back();
 	}
 }
 
@@ -50,7 +50,7 @@ void combinationSum(vector<int> & candidates, int target,
 			combination.push_back(candidates[i]);
 			combinationSum(candidates, target-candidates[i], result, combination, i+1);
 			// 继续搜索的 begin 从i 开始，表示元素可以重复使用
-			combination.pop_back(candidates[i]);	
+			combination.pop_back();	
 		}
 	}
 }
