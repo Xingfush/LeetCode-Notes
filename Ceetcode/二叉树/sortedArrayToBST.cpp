@@ -24,5 +24,21 @@ TreeNode* buildBST(iter b,iter e)
 	return node;
 }
 
+/* 解法2：仿照 sortedListToBST的中序遍历解法，并不比上个解法更好 */
+TreeNode* sortedArrayToBST(vector<int> & nums)
+{
+    if(nums.empty()) return nullptr;
+    int count = 0;
+    return buildBST(nums,count,nums.size());
+}
 
+TreeNode* buildBST(vector<int>& nums, int& ind, int n)
+{
+    if(n<=0) return nullptr;
+    TreeNode* left = buildBST(nums,ind,n/2);
+    TreeNode* root = new TreeNode(nums[ind++]);
+    root->left = left;
+    root->right = buildBST(nums,ind,n-n/2-1);
+    return root;
+}
 

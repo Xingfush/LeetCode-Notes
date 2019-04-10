@@ -13,7 +13,7 @@ TreeNode* build(ListNode* head, ListNode* tail)
 		fast = fast->next->next; // 每次走两步
 	}
 
-	TreeNode* root= new ListNode(slow->val);
+	TreeNode* root= new ListNode(slow->val); // 所以是左闭右开
 	root->left= build(head,slow);
 	root->right= build(slow->next,tail);
 

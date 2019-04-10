@@ -664,3 +664,56 @@ void findPaths(TreeNode* node, int sum, vector<int>& path, vector<vector<int> >&
 
 }
 
+int minDepth(TreeNode* root) {
+	if(root==nullptr) return 0;
+	if(!root->left && !root->right) return 1;
+	if(!root->left) return minDepth(root->right)+1;
+	if(!root->right) return minDepth(root->left)+1;
+	return min(minDepth(root->left),minDepth(root->right))+1;
+}
+
+int minDepth(TreeNode* root){
+	if(root=nullptr) return 0;
+	queue<TreeNode*> q;
+	q.push(root);
+	int l =1;
+	while(!q.empty()){
+		int n = q.size();
+		for(int i=0;i<n;i++){
+			TreeNode* pNode = q.front();
+			q.pop();
+			if(q->left==nullptr && q->right==nullptr) return l;
+			if(q->left) q.push(q->left);
+			if(q->right) q.push(q->right);
+		}
+		l++;
+	}
+	return 0;
+
+}
+
+void reverseString(string& s, int left, int right){
+	while(left<right){
+		swap(s[left++],s[right--]);
+	}
+}
+
+string reverseWordsInString(string s){
+	if(s.size()<2) return s;
+	int start =0,end =s.size()-1;
+	reverseString(s,start,end);
+	end = start;
+
+	while(start<s.size()){
+		if(s[start]==" ")
+			start++,end++;
+		else if(end==s.size() || s[end]==" "){
+			reverseString(s,start,--end);
+			start = ++end;
+		}
+		else
+			end++;
+	}
+	return s;
+}
+
