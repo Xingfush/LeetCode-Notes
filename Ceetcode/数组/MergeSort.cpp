@@ -143,27 +143,138 @@ void Merge_sort(vector<int>::iterator begin, vector<int>::iterator end)
 	}
 }
 
-//int main(int argc, char **argv)
-//{
-//	clock_t Start_time = clock();
-//	int a[10] = { 2,5,6,8,9,15,1,1,1,1 };
-//	vector<int> vec(a, a + 10);
-//	Merge_sort(a, 0, 10);
-//	for (size_t i = 0; i != 10; ++i)
-//	{
-//		cout << a[i] << " ";
-//	}
-//
-//	cout << endl;
-//	Merge_sort(vec.begin(), vec.end());//使用迭代器的版本出现的错误很低级，困扰了我一晚上，结果发现是传入的end迭代器是不可访问的
-//	for (size_t i = 0; i != 10; ++i)
-//	{
-//		cout << vec[i] << " ";
-//	}
-//	cout << endl;
-//	cout << "逆序对个数：" << _count << endl;
-//	clock_t End_time = clock();
-//	cout << "Running time is :" << static_cast<double>(End_time - Start_time) / CLOCKS_PER_SEC * 1000 << " ms" << endl;
-//	//cin.get();
-//	return 0;
-//}
+/* 排序AC代码 */
+#include "stdafx.h"
+#include<iostream>
+#include<time.h>
+#include<queue>
+#include<vector>
+
+using namespace std;
+
+int partition(int* arr, int start, int end)
+{
+	int left = start;
+	int right = end;
+
+	int pivot = arr[end];
+
+	while (left < right)
+	{
+		while (left < right && arr[left] < pivot)
+			left++;
+		while (left < right && arr[right] >= pivot)
+			right--;
+		if (left < right)
+			swap(arr[left], arr[right]);
+	}
+	swap(arr[end], arr[left]);
+
+	return left;
+}
+
+void QuickSort(int* array, int start, int end) {
+	if (start<end) {
+		int k = partition(array, start, end);
+		QuickSort(array, start, k - 1);
+		QuickSort(array, k + 1, end);
+	}
+}
+
+void merge(int* array, int left, int mid, int right) {// 左闭右开
+	int len1 = mid - left, len2 = right - mid;
+	int* array1 = new int[len1];
+	int* array2 = new int[len2];
+	for (int i = 0; i < len1; i++)
+		array1[i] = array[left + i];
+	for (int j = 0; j < len2; j++)
+		array2[j] = array[mid + j];
+	int i = 0, j = 0, k = left;
+	while (i < len1 && j < len2) {
+		if (array1[i] < array2[j])
+			array[k++] = array1[i++];
+		else
+			array[k++] = array2[j++];
+	}
+	while (i < len1)
+		array[k++] = array1[i++];
+	while (j < len1)
+		array[k++] = array2[j++];
+	delete[]array1;
+	delete[]array2;
+}
+
+void MergeSort(int*array, int start, int end) {
+	if (end - start > 1) {
+		int mid = (start + end) / 2;
+		MergeSort(array, start, mid);
+		MergeSort(array, mid, end);
+		merge(array, start, mid, end);
+	}
+}
+
+void InsertSort(int*array, int length) {
+	for (int i = 1; i < length; i++) {
+		int temp = array[i];
+		while(i>0 && temp<array[i-1])
+			array[i--] = array[i - 1];
+		array[i] = temp;
+	}
+}
+
+void ShellSort(int*array, int length) {
+	int gap = length / 2;
+	while (gap != 0) {
+		for (int i = gap; i < length; i++) {
+			int temp = array[i];
+			while (i > gap && temp < array[i - gap]) {
+				array[i] = array[i - gap];
+				i -= gap;
+			}
+			array[i] = temp;
+		}
+		gap /= 2;
+	}
+}
+
+void BubbleSort(int*array, int length) {
+	for (int i = 0; i < length; i++) {
+		for (int j = 0; j < length - i - 1; j++) {
+			if (array[j] > array[j + 1])
+				swap(array[j], array[j + 1]);
+		}
+	}
+}
+
+int main(int argc, char **argv)
+{
+	clock_t Start_time = clock();
+	int a[] = { -2,3,10,5,-4,3,8,8,1,3 };
+	QuickSort(a, 0, 9);
+	cout << "快速排序后：";
+	for (int i = 0; i < 10; i++) {
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	MergeSort(a, 0, 10);
+	cout << "归并排序后：";
+	for (int i = 0; i < 10; i++) {
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	InsertSort(a, 10);
+	cout << "插入排序后：";
+	for (int i = 0; i < 10; i++) {
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	ShellSort(a, 10);
+	cout << "插入排序后：";
+	for (int i = 0; i < 10; i++) {
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	clock_t End_time = clock();
+	cout << "Running time is :" << static_cast<double>(End_time - Start_time) / CLOCKS_PER_SEC * 1000 << " ms" << endl;
+	return 0;
+}

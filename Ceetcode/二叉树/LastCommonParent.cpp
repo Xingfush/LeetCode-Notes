@@ -66,7 +66,9 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     return pathp[n-1];
 }
 
-/* 在二叉搜索树中寻找最小祖先 */
+/* 在二叉搜索树中寻找最小祖先 
+ 要求：二叉树中没有重复的元素，一旦有重复元素，方向就无法判别，该方法失效*/
+
 
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     if(root==nullptr || p==nullptr ||q ==nullptr)

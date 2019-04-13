@@ -13,7 +13,8 @@ TreeNode* getInorderSuccessor(TreeNode* pNode)
 		pNext = pNode;
 	}
 	else{
-		TreeNode* pParent = pNode;
+		// TreeNode* pParent = pNode; // 这里应该是
+		TreeNode* pParent = pNode->parent;
 		while(pParent!=nullptr && pParent->left!=pNode)
 		{
 			pNode = pParent;

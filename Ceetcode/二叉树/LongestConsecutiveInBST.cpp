@@ -13,14 +13,18 @@ int LongestConsecutiveTreeNode(TreeNode* root)
 
 void preOrderTraverse(TreeNode* root, int v, int out, int & res)
 {
-	if(root==nullptr)
+	if(root==nullptr) // out 
 		return;
-	if(root->val == v+1)
+	if(root->val == v+1) // 上个结点的值一定要保留
 		out++;
 	else
 		out=1; // 不连续则重置为1
 	res = max(res, out) // 更新最好结果
 	preOrderTraverse(root->left, root->val, out, res);
-	preOrderTraverse(root->right, root-val, out, res);
+	preOrderTraverse(root->right, root->val, out, res);
 }
+
+
+
+
 
