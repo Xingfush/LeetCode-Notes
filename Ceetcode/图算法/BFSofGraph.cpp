@@ -8,8 +8,8 @@ void bfs(int s, vector<vector<int>> G)
 {
 	int n = G.size();
 	queue<int> q;
-	vector<bool> visited(n);
-	fill(visited.begin(), visited.end(), false);
+	vector<bool> visited(n,false);
+	// fill(visited.begin(), visited.end(), false);
 	q.push(s);
 	visited[s] = true; // 防止后面重复入队
 	while (!q.empty()) {
