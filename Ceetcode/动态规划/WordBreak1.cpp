@@ -16,4 +16,15 @@ bool wordBreak(string s, vector<string>& wordDict) {
     return dp[n];
 }
 
-//j=0的时候 dp[0],s.substr(0,i=size) 和 j=i, dp[i], s.substr(i,0) 是等效的，都是判断 s[0,i-1] 是不是在字典里。
+/*j=0的时候 dp[0],s.substr(0,i=size) 和 j=i, dp[i], s.substr(i,0) 是等效的，都是判断 s[0,i-1] 是不是在字典里。
+    # l e e t c o d e
+i:  0 1 2 3 4 5 6 7 8
+j:    0 1 2 3 4 5 6 7
+dp: 0 1 2 3 4 5 6 7 8
+以 i = 5 为例，判断字符串 leetc 是否可分，那么 j 从 0 开始到 i-1，即 j=[0,4],正好覆盖 l e e t c 五个字母
+j = 0 时，判断 dp[0] && leetc
+j = 1 时, 判断 dp[1] && eetc
+...
+j = 4 时，判断 dp[4] && c
+正好 子数组 [j,i] 越来越小，从全字符串到 最后一个字母，使用 s.substr(j,i-j) 表示
+

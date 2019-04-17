@@ -658,6 +658,41 @@ int maxProfit(vector<int> &prices) {
 	return maxProfit;
 }
 
+bool wordBreak(string s, vector<string>& wordDict) {
+	unordered_set<string> map(wordDict.begin(),wordDict.end());
+	int n = s.size();
+	vector<bool> dp(n+1,false);
+	dp[0]=true;
+	for(int i=1;i<=n;i++){
+		for(int j=0;j<i;j++){
+			if(dp[j] && map.count(s.substr(j,i-j)))
+				dp[i]=true;
+		}
+	}
+	return dp[n];
+}
 
+double myPow(double x, int n) {
+	double res = 1.0;
+	for(int i=n;i!=0;i/=2){
+		if(i%2) res *= x;
+		x *= x;
+	}
+	return n<0?1/res:res;
 
+}
 
+void combinationSum(vector<int> & candidates, int target, 
+	vector<vector<int> > &result, vector<int> &combination, int begin){
+	if(target==0){
+		result.push_back(combination);
+		return;
+	}
+	for(int i=begin;i<candidates.size() && target>=candidates[i];i++){
+		if(i==begin || candidates[i-1]!=candidates[i]){
+			combination.push_back(candidates[i]);
+			combinationSum(candidates,target-candidates[i],result,combination,i+1);
+			combination.pop_back();
+		}
+	}
+}
