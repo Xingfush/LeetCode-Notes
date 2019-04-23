@@ -40,7 +40,7 @@ bool hasPathCore(char* matrix, int m, int n, int i, int j, char* str, int length
 
 		if(!hasPath) // 只有档不成功的时候才会回溯，这是只找第一份答案
 		{
-			length--;
+			length--; // 留下答案记录
 			visited[i*n+j]=false;
 		}
 	}

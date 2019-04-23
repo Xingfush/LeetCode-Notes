@@ -53,7 +53,7 @@ int maximalRectangle(vector<vector<char> > & matrix){
 		return 0;
 
 	int res =0, m=matrix.size(), n=matrix[0].size();
-	vector<int> height(n,0),left(n,0),right(n,n);
+	vector<int> height(n,0),left(n,0),right(n,n); // 这里 cur_left = 0, cur_right =n 的作用
 	for(int i=0;i<m;i++)
 	{
 		int cur_left =0, cur_right =n; // 

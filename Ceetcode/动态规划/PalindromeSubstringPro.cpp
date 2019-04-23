@@ -24,7 +24,7 @@ int countSubstrings(string s) {
     vector<vector<bool> > dp(n,vector<bool>(n));
     for(int i=0;i<n;i++){
         for(int j=0;j<=i;j++){
-            if(s[i]==s[j] && (i-j<2 || dp[j+1][i-1]))
+            if(s[i]==s[j] && (i-j<2 || dp[j+1][i-1])) // i-j=2时，刚好 dp[j+1][i-1]在对角线上
             {
                 dp[j][i]=true;
                 res++;
@@ -79,7 +79,7 @@ string longestPalindrome(string s) {
     vector<vector<bool> > dp(n,vector<bool>(n));
     
     for(int i=0;i<n;i++){
-        for(int j=0;j<=i;j++){
+        for(int j=0;j<=i;j++){ // j 从 0 到 i，[j,i] 从 全长到 一个字符
             if(s[j]==s[i] && (i-j<2 || dp[j+1][i-1]))
             {
                 dp[j][i]=true;
@@ -99,11 +99,11 @@ int longestPalindromeSubseq(string s) {
     int n=s.size();
     vector<int> dp(n,0);
     vector<int> dp2(n,0);
-    for(int i=n-1;i>=0;i--){
+    for(int i=n-1;i>=0;i--){ // 这个动态规划的顺序和平常的不太一样
         dp[i]=1;
-        for(int j=i+1;j<n;j++){
-            dp[j]=(s[i]==s[j])?dp2[j-1]+2:max(dp[j-1],dp2[j]);
-        }
+        for(int j=i+1;j<n;j++){ // j>i，此时 dp2[j-1] +2才成立，否则可能只是 +1
+            dp[j]=(s[i]==s[j])?dp2[j-1]+2:max(dp[j-1],dp2[j]); 
+        }  
         swap(dp,dp2);
     }
     return dp2[n-1];

@@ -3,7 +3,7 @@
 
 int findTargetSumWays(vector<int>& nums, int S) {
     int n = nums.size();
-    vector<unordered_map<int,int>> dp(n+1);
+    vector<unordered_map<int,int>> dp(n+1); // 这里使用 hash table主要是为了节省空间
     dp[0][0] = 1;
     for(int i=0;i<n;i++){
         for(auto &a:dp[i]){
