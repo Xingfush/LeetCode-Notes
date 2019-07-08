@@ -12,7 +12,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         sum /= 10;
         if(l1){
             sum += l1->val;
-            l1=l1->next;
+            l1=l1->next；
         }
         if(l2){
             sum += l2->val;
