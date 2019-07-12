@@ -1,7 +1,7 @@
 int MinInOrder(int *arr,int left,int right)
 {
 	int result = arr[left];
-	for (int i = left+1; i < right; i++)
+	for (int i = left+1; i < right; i++) // 这里仅仅是因为前提 arr[left] = arr[right]，所以 i<right，而不是 i<=right;
 	{
 		if (result > arr[i])
 			result = arr[i];
@@ -79,7 +79,7 @@ bool SearchInRotateArray2(int* arr, int lenght, int target)
 		if (arr[mid] < arr[right])
 		{
 			if (arr[mid] < target && arr[right] >= target)
-				left = mid + 1;
+				left = mid + 1; // 因为已经验证过 arr[mid] != target
 			else
 				right = mid - 1;
 		}
