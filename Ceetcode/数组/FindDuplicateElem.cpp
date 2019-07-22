@@ -2,7 +2,7 @@
    若干次，请找出任意一个重复的元素
    要求：线性时间复杂度，空间复杂度为常数，即不能使用哈希表 */
 
-int duplicate(int *array, int length)
+int findDuplicate(int *array, int length)
 {
 	if (array == nullptr|| length<1)
 		return -1;
@@ -20,6 +20,21 @@ int duplicate(int *array, int length)
 			if (array[array[i]] == array[i])
 				return array[i];
 			swap(array[i], array[array[i]]);
+		}
+	}
+	return -1;
+}
+
+
+/* 进阶：当有限定 n 个元素为 [1,n]时，也就是以1开始，找出唯一重复元素 */
+
+int findDuplicate(int *array, int length)
+{
+	for (int i = 0; i<length; i++) {
+		while (array[i] != i + 1) {
+			if (array[array[i] - 1] == array[i])
+				return array[i];
+			swap(array[i], array[array[i] - 1]);
 		}
 	}
 	return -1;

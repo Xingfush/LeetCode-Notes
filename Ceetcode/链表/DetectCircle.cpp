@@ -23,8 +23,3 @@ ListNode* detectCircle(ListNode* head)
 	return nullptr;
 }
 
-struct mycompare{
-	bool operator()(const ListNode *l1, const ListNode *l2){
-		return l1->val>l2->val;
-	}
-}
