@@ -1,45 +1,44 @@
-double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+double findMedianOfSortedArrays(vector<int>& nums1, vector<int>& nums2)
+{
     int m = nums1.size(), n = nums2.size();
-    // 保证 m<n
-    if(m > n) // 这招很妙，一定避免逐个赋值，这个一下子复杂度立马上升到O(n)
-    {
-        return findMedianSortedArrays(nums2,nums1);
-    }
-    // 没有左闭右开，只有划分[0,i),[i,end),划分点i取值[0,end]=[imin,imax]
+    // 确保运行时间为 lg(min(m,n))
+    if( m>n)
+        return findMedianOfSortedArrays(nums2, nums1);
+
     int imin = 0, imax = m;
-    int halflen = (m+n+1)/2;
+    int halfLen = (m+n+1)/2;
     int max_of_left = 0, min_of_right =0;
 
-    while(imin<=imax)// 只要还有划分点，注意是两端闭合
+    while(imin<=imax) // 只要还有划分点，注意两端闭合
     {
         int i = (imin+imax)/2;
-        int j = halflen-i; // 按照定义求j
-        // 情况1，增大i
+        int j = halfLen - i;
+        // 以下讨论三种情况
         // 由 i<m 可以推出 j>0，由 i>0 可以推出 j<n，这是等价条件，是后面nums[j-1]存在的必要条件
-        if(i<m && nums2[j-1]>nums1[i])  //非临界情况检查: i<m and j>0
-            imin = i+1;
-        else if(i>0 && nums1[i-1]>nums2[j]) 
+        if(i>0 && nums1[i-1]>nums2[j])
             imax = i-1;
-        else
-        { // 上面的条件不满足，有6种情况，注意原命题和逆否命题
+        else if(i<m && nums2[j-1]>nums1[i])
+            imin = i+1;
+        else{
             if(i==0)
-                max_of_left=nums2[j-1];
+                max_of_left = nums2[j-1];
             else if(j==0)
-                max_of_left=nums1[i-1];
+                max_of_left = nums1[i-1];
             else
-                max_of_left=max(nums1[i-1],nums2[j-1]);
-            // 如果有奇数个元素，那么直接返回左边的，因为j偏右，左边区间肯定较多方
-            if((m+n) & 1==1)
+                max_of_left = max(nums1[i-1], nums2[j-1]);
+
+            if((m+n)%2==1)
                 return max_of_left;
-            
+
             if(i==m)
-                min_of_right=nums2[j];
+                min_of_right = nums2[j];
             else if(j==n)
-                min_of_right=nums1[i];
+                min_of_right = nums1[i];
             else
-                min_of_right=min(nums1[i],nums2[j]);
+                min_of_right = min(nums1[i], nums2[j]);
 
             return (max_of_left+min_of_right)/2.0;
+
         }
     }
     return 0;
@@ -125,4 +124,3 @@ i<m --> j>0
 综上，我们只需要处理 i =0 和 j=0 两种特殊情况就行了。
 
 */
-

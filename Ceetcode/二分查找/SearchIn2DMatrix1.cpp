@@ -12,10 +12,10 @@ bool searchMatrix(vector<vector<int> > &matrix, int target){
 		return false;
 
 	int m = matrix.size(), n = matrix[0].size();
-	int start =0;
-	int end = m*n; // 这个是关键点
-	while(start<end){
-		int mid = start + (end-start)/2; // 这里一定要加上，对于所有的“左闭右开”
+	int left =0;
+	int right = m*n; // 这个是关键点
+	while(left<right){
+		int mid = left + (right-left)/2; // 这里一定要加上，对于所有的“左闭右开”
 		int value = matrix[mid/n][mid %n];
 		if(value==target)
 			return true;

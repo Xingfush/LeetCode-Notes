@@ -2,13 +2,13 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {
     if(matrix.size()==0||matrix[0].size()==0)
         return false;
     
-    int m=matrix.size(),n=matrix[0].size();
+    int m=matrix.size(), n=matrix[0].size();
     int i=0,j=n-1;
     while(i<m && j>=0)
     {
         if(matrix[i][j]==target)
             return true;
-        else if(matrix[i][j]>target)
+        else if(matrix[i][j]>target) // 找到第一个小于等于 target的元素
         {
             int start=0,end=j; // 这里的 matrix[i][j]>target，所以查找区间缩小为[i,j-1]=[i,j)
             while(start<end)

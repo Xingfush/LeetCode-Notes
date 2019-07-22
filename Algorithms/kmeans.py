@@ -1,55 +1,47 @@
-import numpy as np
-import time
-import matplotlib.pyplot as plt
+import numpy as np 
 
-# Func1: calculate Eulidean distance
-def eulDistance(vector1, vector2):
-	return np.sqrt(np.sum(np.power(vector2-vector1, 2)));
+# compute the eucludian distance
+def euliDistance(vector1, vector2):
+	return np.sqrt(np.sum(np.power(vector2 - vector1, 2)))
 
-# Func2: initialize centroids with random samples
+# initialize the ccentroids
 def initCentroids(dataset, k):
-	numSamples, dim = dataset.shape
-	centroids = np.zeros((k, dim))
-	for i in range(k):
-		index = int(np.random.uniform(0,numSamples))
-		centroids[i, :] = dataset[index, :]
+	numSamples, numFeatures = dataset.shape
+	centroids = dataset[np.random.randint(0,numSamples,size=k),:]
 	return centroids
 
-# Func3: k-means cluster
+# kmeans clustering
 def kmeans(dataset, k):
-	numSamples = dataset.shape[0]
-	# first column stores which cluster this sample belong to,
-	# second column stores the error between this sample and its centroid
-	clusterAssment = np.mat(np.zeros((numSamples, k)))
-	clusterChanged = True
+	numSamples, numFeatures = dataset.shape
 
-	# Step 1: init centroids
+	# initialize centroids
 	centroids = initCentroids(dataset, k)
+
+	# initialize results 
+	clusterResult = np.zeros((numSamples, 2))
+	clusterChanged = True
 
 	while clusterChanged:
 		clusterChanged = False
-		## for each example
-		for i in range(numSamples): # python3 中 range 就是 xrange
-			minDist = 10000.0
+
+		for i in range(numSamples):
+			# update for every sample
 			minIndex = 0
-			# for each centroid
-			# Step 2: find the centroid who is closest
+			minDistance = 10000.0
+
 			for j in range(k):
-				distance = eulDistance(centroid[j,:], numSamples[i,:])
-				if distance<minDist:
-					minDist = distance
-					minIndex = j
+				distance = euliDistance(numSamples[i, :], centroids[j, :])
+				if distance<minDistance:
+					minDistance = distance
+					minIndex = j				
 
-			# Step 3: update its cluster
-			if clusterAssment[i,0] != minIndex:
+			# update for every sample
+			if minIndex != clusterResult[i, 0]:
+				clusterResult[i, :] = minIndex, minDistance
 				clusterChanged = True
-				clusterAssment[i,:] = minIndex, minDist**2 # 连续赋值，厉害
 
-		# Step 4: update centroids
+		# Update the centroids every iteration
 		for j in range(k):
-			pointsInCluster = dataset[np.nonzero(clusterAssment[:,0].A==j)]
-			centroids[j,:] = np.mean(pointsInCluster, axis=0)
+			centroids[j, :] = np.mean(dataset[clusterResult[:, 0]==j], axis=1)
 
-	return centroids, clusterAssment
-
-
+	return centroids, clusterResult

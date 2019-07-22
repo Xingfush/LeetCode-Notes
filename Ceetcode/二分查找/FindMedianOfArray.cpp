@@ -1,51 +1,44 @@
-#include "stdafx.h"
-#include<iostream>
-#include<queue>
-#include<vector>
-
-using namespace std;
-
-int Partition(int*arr, int start, int end)
+int partition(int* array, int start, int end)
 {
-	int left = start, right = end; 
-	// 这里一定是right=end，而不是right=end-1，因为当初始start=end时会出错
-	int pivot = arr[end];
-	while (left < right)// 全是left<right，终止条件肯定是left撞上了right，而不会是right撞left
+	int left = start, right = end;
+	int pivot = array[end];
+
+	while(left<right) // 终止条件肯定是 left撞上 right，array[right,left]肯定大于等于pivot
 	{
-		while (left < right && arr[left] < pivot)
+		while(left<right && array[left]<pivot)
 			left++;
-		while (left<right && arr[right]>=pivot)
+		while(left<right && array[right]>=pivot)
 			right--;
-		if (left < right)
-			swap(arr[left], arr[right]);
+		if(left<right)
+			swap(array[left], array[right]);
 	}
-	swap(arr[left], arr[end]);
+	swap(array[right], array[end]);
 	return left;
 }
 
-int findMedian(vector<int>& nums)
+int findMedian(int* array, int length)
 {
-	int k = (nums.size() - 1) >> 1;
-	int left = 0, right = nums.size() - 1;
-	int result=0;
-	while (true)
+	int k = (length-1)/ 2;
+	int left = 0, right = length-1;
+	int result = 0;
+	while(true)
 	{
-		int q = partition(nums, left, right);
-		if (q == k)
-		{
-			result = nums[q];
+		int q = partition(array, left, right);
+		if(q==k){
+			result = array[q];
 			break;
 		}
-		else if (q < k)
-			left = q + 1;
+		else if(q<k)
+			left = q+1;
 		else
-			right = q - 1;
+			right = q-1;
 	}
 	return result;
 }
 
+
 // C++优先队列默认是大顶堆，也就是队头元素最大，这里将其变为小顶堆
-struct Compare
+struct myCompare
 {
 	int operator()(int left, int right)
 	{
@@ -53,29 +46,20 @@ struct Compare
 	}
 };
 
-int getMiddle(int *arr, int size)
+int getMiddle(int* array, int length)
 {
-	int len = (size+1) / 2;//确保中心偏右
-	priority_queue<int, vector<int>,Compare> q;
-	for (int i = 0; i < len; i++)
-	{
-		q.push(arr[i]);
-	}
-	for (int i = len; i < size; i++)
-	{
-		if (arr[i] > q.top())
-		{
+	int half = (length-1)/2; 
+	priority_queue<int, vector<int>, myCompare> q;
+
+	for(int i=0;i<half;i++)
+		q.push(array[i]);
+
+	for(int i=half;i<length;i++){
+		if(array[i]>q.top()){
 			q.pop();
-			q.push(arr[i]);
+			q.push(array[i]);
 		}
 	}
-	if (!q.empty())
+	if(!q.empty())
 		return q.top();
-}
-
-int main()
-{
-	int a[8] = { -10,1,18,0,9,7,0,5 };
-	cout << getMiddle(a, 8) << endl;
-    return 0;
 }

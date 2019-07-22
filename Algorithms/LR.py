@@ -1,33 +1,33 @@
 import numpy as np 
-import time
 
-# Func1: calculate the sigmoid function
-def sigmoid(inX):
-	return 1.0/(1 + np.exp(-inX))
+def sigmoid(x):
+	return 1.0 / (1+np.exp(-x))
 
-# train a logistic regression model using some optional optimize algorithm
-# input: train_x is a mat datatype, each row stands for one example
-#        train_y is a mat datatype, each row is corresponding label
-#		 opts is optimize option include step and maximum number of iterations
 def trainLogRegress(train_x, train_y, opts):
-	# calculate trainint time 
-	startTime = time.time()
-
 	numSamples, numFeatures = train_x.shape
-	alpha = opts['alpha']
-	maxIter = opts['maxIter']
-	weights = np.ones((numFeatures,1))
 
-	# optimize through gradient descent algorithm
+	alpha = opts['alpha']
+	maxIter = opts['Iters']
+
+	weights = np.mat(np.random.randn(numFeatures, 1))
+	train_x = np.hstack((train_x, np.ones((numSamples, 1))))
+
 	for k in range(maxIter):
-		if opts['optimizeType'] == 'gradDescent':
+		if opts['method'] == 'gradDescent':
 			output = sigmoid(train_x*weights)
 			error = train_y - output
-			weights = weights + alpha*train_x.transpose()*error
-		elif opts['optimizeType'] == 'stocGradDescent':
+			weights += alpha*train_x.T*error
+		else
 			for i in range(numSamples):
-				output = sigmoid(train_x[i,:]*weights)
-				error = train_y[i,0] - output
-				
+				output = sigmoid(train_x[i, :]*weights)
+				error = train_y[i, :] - output
+				weights += alpha*np.ravel(error)[0]*train_x[i, :]
 
+	return weights
+
+def testLogRegress(weights, test_x, test_y):
+	numSamples, _ = test_x.shape
+	test_x = np.hstack((test_x, np.ones((numSamples, 1))))
+	prediction = (test_x*weights > 0.5).astype(np.int16)
+	return np.sum(prediction==test_y) / float(numSamples)
 
