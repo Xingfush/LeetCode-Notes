@@ -25,7 +25,7 @@ void findPaths(TreeNode* node, int sum, vector<int>& path, vector<vector<int> >&
     if (!node) return; // 一个终止条件就够了
     path.push_back(node -> val);
     if (!(node -> left) && !(node -> right) && sum == node -> val)
-        paths.push_back(path); // 考虑在后面加一个 return;因为没有子结点了，可以直接返回
+        paths.push_back(path); // 后面不能加 return，因为 path.pop_back()
     findPaths(node -> left, sum - node -> val, path, paths);
     findPaths(node -> right, sum - node -> val, path, paths);
     path.pop_back(); // 退出前一定要弹出该节点的元素
