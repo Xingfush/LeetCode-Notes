@@ -42,6 +42,6 @@ def kmeans(dataset, k):
 
 		# Update the centroids every iteration
 		for j in range(k):
-			centroids[j, :] = np.mean(dataset[clusterResult[:, 0]==j], axis=1)
+			centroids[j, :] = np.mean(dataset[clusterResult[:, 0]==j], axis=0)
 
 	return centroids, clusterResult

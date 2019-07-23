@@ -44,3 +44,36 @@ int lengthOfLIS(vector<int>& nums)
     return tailTable.size();
 }
 
+/* 返回内容 */
+
+int LongestIncreasingSequence(vector<int>& nums)
+{
+    if(nums.empty()) 
+        return 0;
+    vector<int> tailTable;
+    vector<vector<int>> records;
+    tailTable.push_back(nums[0]);
+    records.push_back(tailTable);
+
+    for(int num:nums)
+    {
+        int start = 0, end = tailTable.size();
+        while(start<end){
+            int mid = start+(end-start)/2;
+            if(tailTable[mid]<num)
+                start = mid+1;
+            else
+                end = mid;
+        }
+        if(start==tailTable.size()){
+            tailTable.push_back(num);           
+            records.push_back(tailTable.back().push_back(num));
+        }
+        else{
+            tailTable[start] = num;
+            records[start].pop_back();
+            records[start].push_back(num);
+        }
+    }
+    return records.back();
+}

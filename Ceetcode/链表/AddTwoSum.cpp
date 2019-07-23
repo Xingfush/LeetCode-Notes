@@ -25,5 +25,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         d->next = new ListNode(sum/10);
         d = d->next;
     }
-    return sential->next;
+    d = sential->next;
+    delete sential;
+    return d;
 }
