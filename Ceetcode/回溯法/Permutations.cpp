@@ -55,3 +55,8 @@ void dfs(vector<int>& nums, int len, vector<vector<int>>& res,
         visited[i]=false;
     }
 }
+
+/* 需要说明，排列问题本身就是 n! 复杂度的，如果我们不剪枝，则会达到 n^n 时间复杂度
+   这里使用 visited 的意义就在于剪枝；
+   另外，去重操作 !visited[i-1] 表示的 nums[i-1] 没有访问过是必要的，
+   如果 nums[i-1] 访问过，那么按顺序应该访问 nums[i] 从而构成一组解 */

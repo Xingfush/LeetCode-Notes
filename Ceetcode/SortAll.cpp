@@ -43,7 +43,7 @@ int partition(int* array, int start, int end)
 
 void QuickSort(int* array, int start, int end)
 {
-	if (start<end) { // 至少有一个元素
+	if (start<end) { // 至少有两个元素
 		int k = partition(array, start, end);
 		QuickSort(array, start, k - 1); // K-1, k +1
 		QuickSort(array, k + 1, end);
@@ -85,7 +85,7 @@ void Merge(int a[], int left, int mid, int right)
 
 void MergeSort(int a[], int left, int right)
 {
-	if (right - left > 1)
+	if (right - left > 1) // 至少有两个元素
 	{
 		int mid = (left + right) / 2;
 		MergeSort(a, left, mid);
@@ -138,33 +138,29 @@ void BubbleSort(int* array, int length)
 // 或许只有对于 array 指针引用，这样的方式才是有意义的
 void Heapify(int* array, int n, int i)
 {
-	// 设定 n 为 array 的元素个数
-	int left = 2 * i + 1;
-	int right = 2 * i + 2;
+	int left = 2*i+1;
+	int right = 2*i+2;
 	int largest = i;
 
-	if (left<n - 1 && array[left]>array[i])
+	if(left<n && array[left]>array[i])
 		largest = left;
-	if (left<n - 1 && array[right]>array[i])
+	if(right<n && array[right]>array[i])
 		largest = right;
-	if (largest != i) {
-		swap(array[largest], array[i]);
+	if(largest!=i){
+		swap(array[i],array[largest])
 		Heapify(array, n, largest);
 	}
-
 }
 
 void HeapSort(int* array, int length)
 {
-	if (array == nullptr || length <= 1)
+	if(array==nullptr || length<1)
 		return;
-	for (int i = (length >> 1); i >= 0; i--) {
+	for(int i=length/2;i>=0;i--)
 		Heapify(array, length, i);
-	}
-	for (int n = length; n >= 1; n--)
-	{
-		swap(array[n - 1], array[0]);
-		Heapify(array, n - 1, 0);
+	for(int n=length;n>0;n--){
+		swap(array[n-1],array[0]);
+		Heapify(array, n-1, 0);
 	}
 }
 
