@@ -24,7 +24,7 @@ bool hasPathCore(char* matrix, int m, int n, int i, int j, char* str, int length
 	// 终止条件1
 	if(str[length]=='\0')
 		return true;
-	bool hasPath = false;
+	bool hasPath = false; // hasPath 是成功状态的标志
 	// 准入判别条件，不准入则直接返回上面的 false
 	if(i>=0 && i<m && j>=0 && j<n && visited[i*n+j]==false
 		&& matrix[i*n+j]==str[length])

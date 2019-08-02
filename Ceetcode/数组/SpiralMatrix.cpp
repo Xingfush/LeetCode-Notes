@@ -12,7 +12,7 @@ vector<int> spiralOrder(vector<vector<int>>& matrix) {
     int l=0,r=n-1,u=0,d=m-1;
     vector<int> res(m*n,0);
     int p=0;
-    while(l<=r && u<=d){
+    while(l<=r && u<=d){ // 注意终止条件 l<=r, u<=d
         for(int col =l;col<=r;col++){
             res[p++]=matrix[u][col];
         }

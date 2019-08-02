@@ -38,7 +38,7 @@ void dfs(vector<int>& nums, int k, vector<int>& out,
     }
     for(int i=ind;i<nums.size();i++)
     {
-        if(i!=ind || nums[i]!=nums[i-1]){
+        if(i==ind || nums[i]!=nums[i-1]){
             out.push_back(nums[i]);
             dfs(nums,k,out,res,ind+1);
             out.pop_back()

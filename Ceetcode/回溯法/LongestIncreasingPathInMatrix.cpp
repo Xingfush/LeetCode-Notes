@@ -14,20 +14,31 @@ public:
         return res;
     }
 private:
-    int rows;
-    int cols;
+/* 设置全局变量 */
+    int rows ,cols;
     vector<vector<int>> dp;
-    
-    int dfs(vector<vector<int>>& matrix, int i, int j){
-        if(dp[i][j]>0) return dp[i][j]; // 缓存加速，即动态规划
-        int res = 1; // 每次的 res 从1开始计，是为了方便求出每个子问题的解，后面赋给 dp
-        if(i>0 && matrix[i][j]>matrix[i-1][j]) res=max(res,dfs(matrix,i-1,j)+1); // 知道每一次的步进量，每次重新从子问题开始求，最优子问题
-        if(i<rows-1 && matrix[i][j]>matrix[i+1][j]) res=max(res,dfs(matrix,i+1,j)+1);
-        if(j>0 && matrix[i][j]>matrix[i][j-1]) res=max(res,dfs(matrix,i,j-1)+1);
-        if(j<cols-1 && matrix[i][j]>matrix[i][j+1]) res=max(res,dfs(matrix,i,j+1)+1);
-        dp[i][j]= res; // 只有四个方向遍历完后才会 作为该位置的
-        return res; 
+
+    int dfs(vector<vector<int>>& matrix, int i, int j)
+    {
+        if(dp[i][j]>0) 
+            return dp[i][j]; // 已访问，作剪枝
+        int res = 1;
+        if(i>0 && matrix[i][j]>matrix[i-1][j]) // 终止条件和扩张方向合在一起 
+            res = max(res, dfs(matrix, i-1, j)+1);
+        if(i<rows-1 && matrix[i][j]>maxtrix[i+1][j]) 
+            res = max(res, dfs(matrix, i+1, j)+1);
+        if(j>0 && matrix[i][j]>maxtrix[i][j-1])
+            res = max(res, dfs(matrix, i, j-1)+1);
+        if(j<cols-1 && matrix[i][j]>matrix[i][j+1])
+            res = max(res, dfs(matrix, i, j+1)+1);
+        dp[i][j] = res; // 四个方向遍历完之后才最作为该位置的 dp，下一次剪枝，状态更新
+        return res;
     }
+
+    /* 这个问题没有收敛条件 */
 };
+
+/* 对于求最大值的问题，一边要设置一个 max 不断更新最大值，一边要返回本结点的
+    状态，本题用了动态规划来进行剪枝 */
 
 

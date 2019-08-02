@@ -10,7 +10,7 @@ vector<vector<int> > threeSum(vector<int> &num) {
         int front = i + 1;
         int back = num.size() - 1;
 
-        while (front < back) {
+        while (front < back) { // front<back 保证至少有两个元素
 
             int sum = num[front] + num[back];
             
