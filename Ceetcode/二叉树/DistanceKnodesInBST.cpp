@@ -37,3 +37,6 @@ void dfs(TreeNode* pNode, int K){
 	if(parent[pNode])
 		dfs(parent[pNode],K-1);
 }
+
+/* 所谓终止条件：就是防止越界进入新的 dfs，这里没有在开头设置 if(pNode==nullptr)
+    而是在 进入新的 dfs 时候，设置了 if(pNode->left)，其实是效果是一样的 */

@@ -1,3 +1,5 @@
+/* 后序遍历是关键 */
+
 int diameterOfBinaryTree(TreeNode* root) {
     int res = 0;
     helper(root, res);

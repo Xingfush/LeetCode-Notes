@@ -34,7 +34,7 @@ int lengthOfLIS(vector<int>& nums)
             if(tailTable[mid]<num)
                 start=mid+1;
             else
-                end=mid;
+                end=mid; // 从 tailTable 找到第一个大于等于 num的值
         }
         if(start==tailTable.size())
             tailTable.push_back(num);

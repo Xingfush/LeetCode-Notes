@@ -1,5 +1,5 @@
-
-/* 广度优先遍历 BFS ：使用队列 */
+/* 广度优先遍历 BFS ：使用队列
+   所谓最小深度，就是出现了一个结点，其左子树和右子树都为空，即叶子结点 */
 
 int minDepth(TreeNode* root) {
     if(root==nullptr)

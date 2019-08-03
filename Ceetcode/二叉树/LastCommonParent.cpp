@@ -63,7 +63,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     for (int i=1; i<n; i++) {
         if (pathp[i]!=pathq[i]) return pathp[i-1];
     }
-    return pathp[n-1];
+    return pathp[n-1]; // 说明路径是包含关系，则返回最短路径的最后一个
 }
 
 /* 在二叉搜索树中寻找最小祖先 

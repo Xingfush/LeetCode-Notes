@@ -12,5 +12,5 @@ int dfs(TreeNode* root){
     int right = dfs(root->right);
     if(abs(left-right)>1)
         result = false;
-    return max(left,right)+1; // 后序遍历
+    return max(left,right)+1; // 后序遍历是关键
 }

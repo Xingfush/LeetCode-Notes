@@ -23,9 +23,9 @@ int findMedian(int* array, int length)
 	int result = 0;
 	while(true)
 	{
-		int q = partition(array, left, right);
+		int q = partition(array, left, right); 
 		if(q==k){
-			result = array[q];
+			result = array[q]; // 防止 q 局部变量在while外失效
 			break;
 		}
 		else if(q<k)

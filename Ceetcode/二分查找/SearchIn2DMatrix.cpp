@@ -32,3 +32,43 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {
 // 二分查找只能用在行的搜索上面：找到第一个小于等于target的值，列的二分无法做到，因为切片复制有线性时间复杂度
 // 面试之所以失败，是因为没有搞清楚 行查找的目的，列查找的目的，
 // 一个是为了找到<=target的，另一个是为了>=target的，各有目的，临时抱佛脚，大脑一片空白，难怪失败。
+
+/* 全二分：谁说不可以 */
+
+bool searchMatrix(vector<vector<int>>& matrix, int target)
+{
+    if(matrix.empty() || matrix[0].empty())
+        return false;
+    int m = matrix.size(), n = matrix[0].size();
+    int i = 0, j=n-1;
+    while(i<m && j>=0)
+    {
+        if(matrix[i][j]==target)
+            return true;
+        if(matrix[i][j]<target){
+            int top = i, bottom = m;
+            while(top<bottom){
+                int mid = top + (bottom-top)/2;
+                if(matrix[mid][j]<target)
+                    top = mid +1;
+                else
+                    bottom = mid;
+            }
+            i = bottom;
+        }
+        else{
+            int left = 0, right = j;
+            while(left<right){
+                int mid = left + (right-left)/2;
+                if(matrix[i][mid]<=target)
+                    left = mid +1;
+                else
+                    right = mid;
+            }
+            j = left -1;
+        }
+    }
+    return false;
+}
+
+
