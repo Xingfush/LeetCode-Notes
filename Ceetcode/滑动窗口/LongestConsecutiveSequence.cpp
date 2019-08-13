@@ -12,9 +12,9 @@ int LongestConsecutiveSeq(vector<int>& nums)
 		int pre = val-1;
 		int next = val +1;
 		while(s.count(pre))
-			pre--;
+			s.erase(pre--);
 		while(s.count(next))
-			next++; // 最终pre+1,next-1都是连续子序列的一部分，而pre和next不是
+			s.erase(next++); // 最终pre+1,next-1都是连续子序列的一部分，而pre和next不是
 		result = max(result, next-pre-1); // 所以计算长度时使用 next-pre-1,而不是 next-pre+1
 	}
 	return result;
