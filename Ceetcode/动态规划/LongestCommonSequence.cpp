@@ -12,7 +12,7 @@ int longestCommonSequence(string &A, string &B) {
 		for (int j = 1; j <= n; j++) {
 			dp[j] = (A[i - 1] == B[j - 1]) ? dp2[j - 1] + 1 : max(dp[j - 1], dp2[j]);
 		}
-		swap(dp, dp2);
+		dp.swap(dp2);
 	}
 	return dp2[n];
 }

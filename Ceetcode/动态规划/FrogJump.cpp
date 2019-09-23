@@ -26,9 +26,6 @@ bool canCross(vector<int>& stones)
 			if(m[j].count(t-1) || m[j].count(t) || m[j].count(t+1)){
 				m[i].insert(t);
 				dp[i] = max(dp[i], t);
-			
-
-
 			}
 		}
 	}

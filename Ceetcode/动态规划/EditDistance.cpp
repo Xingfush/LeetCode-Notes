@@ -14,7 +14,8 @@ int minDistance(string word1, string word2) {
             else
                 dp[j]=min(dp2[j-1],min(dp[j-1],dp2[j]))+1;
         }
-        swap(dp,dp2);
+        // swap(dp,dp2)，使用 vector::swap()方法而不是 STL::swap()
+        dp.swap(dp2); // 常数时间复杂度操作
     }
     return dp2[n];
 }

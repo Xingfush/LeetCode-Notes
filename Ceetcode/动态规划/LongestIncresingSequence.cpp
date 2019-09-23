@@ -1,5 +1,12 @@
 /* lower_bound()返回第一个大于等于target的位置（迭代器）
-   upper_bound()返回第一个 大于 target的位置（迭代器）*/
+   upper_bound()返回第一个 大于 target的位置（迭代器）
+   这里我们到底用 lower_bound还是 upper_bound？
+   如果 要求严格单调递增，那么我们必须找到 >= num的第一个数，就取而代之，
+   例如 [1,2,2,3,4]，我们找到的tailTable中必须是 [1,2,3,4]，到 num=2的
+   时候，我们必须找到>= 2的，因为如果找 >2 的，那么就又会.push_back num=2。
+   所以这时候必须用 lower_bound。
+   而如果不要求严格单调递增，那么用 upper_bound即可，可以容易多个 num=2。
+   仔细理解一下！！！*/
 
 int lengthOfLIS(vector<int>& nums) {
     if(nums.size()==0)
@@ -17,13 +24,13 @@ int lengthOfLIS(vector<int>& nums) {
     return tailTable.size();
 }
 
-// 如果面试官不允许我们使用STL函数，那么手写 lower_bound 函数
+// 如果面试官不允许我们使用STL函数，那么手写 lower_bound 函数，要求严格递增
 int lengthOfLIS(vector<int>& nums)
 {
     if(nums.size()==0)
         return 0;
     vector<int> tailTable;
-    tailTable.push_back(nums[0]);
+    tailTable.push_back(nums[0]); // 这个其实无所谓，因为 lower_bound不对空数组报错
 
     for(int num:nums)
     {
