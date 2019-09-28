@@ -24,7 +24,8 @@ vector<int> distanceK(TreeNode* root, TreeNode* target, int K){
 
 void dfs(TreeNode* pNode, int K){
 	if(visited.count(pNode)) return;
-
+	// 如果 pNode先被访问了，说明 pNode距离那个结点距离更近，按照那个距离算，
+	// 这里的 K 代表的是最短距离，而不是能够到达的距离
 	visited.insert(pNode);
 	if(K==0){
 		ans.push_back(pNode->val);

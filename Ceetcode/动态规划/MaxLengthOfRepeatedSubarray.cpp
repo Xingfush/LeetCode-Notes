@@ -15,7 +15,7 @@ int findLength(vector<int>& A, vector<int>& B) {
             dp[j]=(A[i-1]==B[j-1])?dp2[j-1]+1:0;
             res = max(res,dp[j]);
         }
-        swap(dp,dp2);
+        dp.swap(dp2);
     }
     return res;
 

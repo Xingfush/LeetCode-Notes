@@ -1,4 +1,3 @@
-/* 题目1：找出所有和为target的元素组合，数组元素无重复，元素可重复使用，组合不能有重复 */
 /* 使用回溯法 */ 
 
 vector<vector<int> > combinationSum(vector<int> & candidates, int target)
@@ -10,47 +9,21 @@ vector<vector<int> > combinationSum(vector<int> & candidates, int target)
 	return result;
 }
 
-
-/* 这里注意begin的使用，去除重复查找，后面的元素配对时，不能再使用前面的元素 */
-void combinationSum(vector<int> & candidates, int target, 
-	vector<vector<int> > &result, vector<int> &combination, int begin)
-{
-	if(target==0)// 判断成功
-	{
-		result.push_back(combination);
-		return;
-	}
-	// 开始选优搜索,target>=candidates[i]配合前面的排序，起到了提前
-	for(int i=begin; i<candidates.size() && target>=candidates[i]; i++)
-	{
-		combination.push_back(candidates[i]);
-		combinationSum(candidates, target-candidates[i], result, combination, i);
-		// 继续搜索的 begin 从i 开始，表示元素可以重复使用
-		combination.pop_back();
-	}
-}
-
-/* 题目2：数组元素有重复，元素不可重复使用 */
 // trick1：排序后，遍历是必要的，遇见重复的元素，直接跳过，不做判断
 // trick2：继续搜索时，begin 从i+1 开始，表示，这个元素不能重复使用
 
-void combinationSum(vector<int> & candidates, int target, 
-	vector<vector<int> > &result, vector<int> &combination, int begin)
+void combinationSum(vector<int>& nums, int target, vector<vector<int> >& res,
+				vector<int> path, int ind)
 {
-	if(target==0)// 判断成功
-	{
-		result.push_back(combination);
-		return;
+	if(target==0){
+		res.push_back(path); // 注意这里后面不要加 return，因为会出现后面组合为0，
+		// 例如 target = 8, [2,4,2,2,-2,0]，如果加了 return 那么 [2,4,2,2-2]就不会出现
 	}
-	// 开始选优搜索,target>=candidates[i]配合前面的排序，起到了提前
-	for(int i=begin; i<candidates.size() && target>=candidates[i]; i++)
-	{
-		if(i==begin || candidates[i]!=candidates[i-1])
-		{
-			combination.push_back(candidates[i]);
-			combinationSum(candidates, target-candidates[i], result, combination, i+1);
-			// 继续搜索的 begin 从i 开始，表示元素可以重复使用
-			combination.pop_back();	
+	for(int i=ind;i<nums.size();i++){
+		if(i==ind || nums[i]!=nums[i-1]){
+			path.push_back(nums[i]);
+			combinationSum(nums, target-nums[i], res, path, i+1);
+			path.pop_back();
 		}
 	}
 }

@@ -34,7 +34,7 @@ vector<vector<int>> subsetsWithDuplicate(vector<int>& nums)
 
 void dfs(vector<int>& nums, int ind, vector<int>& path, vector<vector<int>>& res)
 {
-	res.push_back(path);
+	res.push_back(path); // 去掉收敛条件，就是全组合，必须记住
 	for(int i=ind;i<nums.size();i++)
 	{
 		if(i==ind || nums[i]!=nums[i-1]){

@@ -20,28 +20,28 @@ void dfs(int n, int k, int ind, vector<int>& out, vector<vector<int>>& res) {
 
 /* 对数组进行 组合，借鉴combination sum 去重操作 */
 
-vector<vector<int>> combine(vector<int>& nums, int k)
+void dfs(vector<int>& nums, int k, vector<int>& out,
+    vector<vector<int>>& res, int ind)
 {
-    sort(nums.begin(),nums.end())
-    vector<vector<int>> res;
-    vector<int> out;
-    dfs(nums, k, out, res, ind);
-    return res;
-}
-
-void dfs(vector<int>& nums, int k, vector<int>& out, 
-                vector<vector<int>>& res, int ind)
-{
-    if(out.size()==k){
+    if (out.size() == k) {
         res.push_back(out);
         return;
     }
-    for(int i=ind;i<nums.size();i++)
-    {
-        if(i==ind || nums[i]!=nums[i-1]){
+    for (int i = ind; i<nums.size(); i++){
+        // 这个去重条件必须记住，必须理解
+        if (i == ind || nums[i] != nums[i - 1]) {
             out.push_back(nums[i]);
-            dfs(nums,k,out,res,ind+1);
-            out.pop_back()
+            dfs(nums, k, out, res, i + 1);
+            out.pop_back();
         }
     }
+}
+
+vector<vector<int>> combine(vector<int>& nums, int k)
+{
+    sort(nums.begin(), nums.end());
+    vector<vector<int>> res;
+    vector<int> out;
+    dfs(nums, k, out, res, 0);
+    return res;
 }

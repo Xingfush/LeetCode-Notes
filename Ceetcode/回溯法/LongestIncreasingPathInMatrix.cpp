@@ -20,7 +20,7 @@ private:
 
     int dfs(vector<vector<int>>& matrix, int i, int j)
     {
-        if(dp[i][j]>0) 
+        if(dp[i][j]>0)  // dp 也起到了防止重复访问的作用
             return dp[i][j]; // 已访问，作剪枝
         int res = 1;
         if(i>0 && matrix[i][j]>matrix[i-1][j]) // 终止条件和扩张方向合在一起 
