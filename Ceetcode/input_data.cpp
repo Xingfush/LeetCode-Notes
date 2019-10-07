@@ -35,3 +35,16 @@ for (int i = 0; i < m; i++){
         cin >> nums[i][j];
     }
 }
+
+/* 计时输入 */
+int main(int argc, char **argv)
+{
+    clock_t Start_time = clock();
+    
+    ////
+
+    clock_t End_time = clock();
+    cout << "Running time is :" << static_cast<double>(End_time - Start_time) / CLOCKS_PER_SEC * 1000 << " ms" << endl;
+    //cin.get();
+    return 0;
+}

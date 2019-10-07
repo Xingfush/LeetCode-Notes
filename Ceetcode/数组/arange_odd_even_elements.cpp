@@ -2,7 +2,7 @@
 调整位置，要求奇数位置全为奇数，偶数位置全为偶数，
 常数空间，线性时间复杂度 */
 
-void arrange_odd_even_elements(vector<int>& nums){
+void ArrangeOddEevenElements(const vector<int>& nums){
     int odd = 0, even = 1; // 双标指针交换法
     while(even<nums.size() && odd<nums.size()){
         while(nums[odd] & 1) odd+=2;

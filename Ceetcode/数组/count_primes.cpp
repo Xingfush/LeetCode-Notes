@@ -1,6 +1,6 @@
 /* 求[1,n)范围内的素数个数 */
 
-int count_primes(int n){
+int CountPrimes(int n){
     vector<bool> isPrime(n,true);
     int res = 0;
     for(int i=2;i<n;i++){
