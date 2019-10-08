@@ -15,8 +15,7 @@ int InversePairsCore(int* array, int* copy, int start, int end){
         if(array[i]>array[j]){
             count += j-i;
             copy[k++] = array[j++];
-        }
-        else{
+        }else{
             copy[k++] = array[i++];
         }
     }
