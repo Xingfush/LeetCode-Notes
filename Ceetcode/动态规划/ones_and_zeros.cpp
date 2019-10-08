@@ -1,10 +1,10 @@
 /* 使用有限的给定的字符，尽可能多的构成数组中的元素，来源于0-1背包问题的自顶向下的思想，仔细体会。 */
 
-int findMaxForm(vector<string>& strs, int m, int n) {
-    int len = strs.size();
+int FindMaxForm(const vector<string>& strs, 
+               int m, int n) {
     vector<vector<int>> dp(m+1,vector<int>(n+1,0));
     
-    for(int i=1;i<=len;i++){
+    for(int i=1;i<=strs.size();i++){
         int ones = count(strs[i-1].begin(),strs[i-1].end(),'1');
         int zeros = strs[i-1].size()-ones;
         for(int j=m;j>=zeros;j--){
@@ -13,6 +13,7 @@ int findMaxForm(vector<string>& strs, int m, int n) {
             }
         }
     }
+    
     return dp[m][n];
 }
 

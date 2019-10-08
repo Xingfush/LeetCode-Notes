@@ -4,19 +4,20 @@
 	如果队尾元素小于新的元素，那么队尾元素删除，新元素入队。
 	每次求最大值的过程就是 取队首。*/
 
-vector<int> maxSlidingWindow(vector<int> & nums, int k){
-	vector<int> res;
-	deque<int> q;
-	for(int i=0;i<nums.size();++i){
-		if(!q.empty() && q.front() == i-k) q.pop_front(); // q.empty() 判断
-		while(!q.empty() && nums[q.back()] < nums[i]) q.pop_back(); // q.empty() 判断
-		q.push_back(i);
-		if(i>=k-1){
-			res.push_back(nums[q.front()]);
-		}
+vector<int> MaximunSlidingWindow(const vector<int>& nums, int k){
+    vector<int> res;
+    deque<int> q;
+    for(int i=0;i<nums.size();i++){
+        while(!q.empty() && q.front()==i-k)
+            q.pop_front();
+        while(!q.empty() && nums[q.back()]<nums[i])
+            q.pop_back();
+        q.push_back(i);
+        if(i>=k-1)
+            res.push_back(nums[q.front()]);
+    }
 
-	}
-	return res;
+    return res;
 }
 
 // 之前所有 小于新入元素的队元素，全部移除

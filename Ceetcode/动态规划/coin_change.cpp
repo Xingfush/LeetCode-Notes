@@ -1,8 +1,7 @@
 /* 背包问题的又一延伸，动态规划的遍历方式相同 */
 
-int coinChange(vector<int>& coins, int amount)
-{
-	int max = amout + 1;
+int CoinChange(const vector<int>& coins, int amount){
+	int max = amount + 1;
 	vector<int> dp(amount+1, max);
 	dp[0] = 0;
 
@@ -24,8 +23,7 @@ int coinChange(vector<int>& coins, int amount)
 
 /* 要是硬币不可以复用，那么这个问题更加的普遍 */
 
-int coinChange(vector<int>& coins, int amount)
-{
+int CoinChange(const vector<int>& coins, int amount){
 	int max = amount + 1;
 	vector<int> dp(amount+1, max);
 	dp[0] = 0;
