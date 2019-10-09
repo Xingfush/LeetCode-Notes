@@ -2,7 +2,7 @@
 
 /* 状态转移方程：max_end_here = max(max_end_here+array[i],array[i]) */
 
-int maxSubArray(vector<int>& nums) {
+int MaxSubArray(const vector<int>& nums) {
     int max_end_here = nums[0];
     int max_so_far = nums[0];
     for(int i=1;i<nums.size();i++)
@@ -15,11 +15,9 @@ int maxSubArray(vector<int>& nums) {
 
 /* 需要返回坐标 */
 
-vector<int> maxSubArray(vector<int>& nums){
-	int start = 0, end = 0;
-	int max_end_here = nums[0];
-	int max_so_far = nums[0];
-	int j = 0;
+vector<int> MaxSubArray(vector<int>& nums){
+	int start = 0, end = 0, j = 0; // j 是游标
+	int max_end_here = nums[0], max_so_far = nums[0];
 	for(int i=1;i<nums.size();i++){
 		if(max_end_here<0){
 			max_end_here = 0;

@@ -1,7 +1,7 @@
 /* 和 max subarray sum 不同的是，由于会出现负数，因此需要保存两个动态数组，
 保存最大和最小，这里注意，初始化非常重要。 */
 
-int maxProduct(vector<int>& nums) {
+int MaxProduct(const vector<int>& nums) {
     int mx = nums[0], mn = nums[0], res = nums[0];
     for(int i=1;i<nums.size();i++){
         int temp_mx = mx, temp_mn = mn;

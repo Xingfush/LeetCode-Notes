@@ -3,7 +3,7 @@
 	1.若 s[j-1]==t[i-1]，那么 dp[i][j] = dp[i-1][j-1] + dp[i][j-1]，仔细理解这个式子，为什么要加上 dp[i-1][j-1]
 	2.若 s[j-1]!=t[i-1]，那么 dp[i][j] = dp[i][j-1]，因为条件已知最后一个字母是无效的。 */
 
-int numDistinct(string s, string t) {
+int NumDistinct(const string& s, const string& t) {
     int n = s.size(),m=t.size();
     if(n<m) return 0;
     
@@ -14,7 +14,8 @@ int numDistinct(string s, string t) {
         for(int j=1;j<=n;j++){
             dp[j]=dp[j-1]+(s[j-1]==t[i-1]?dp2[j-1]:0);
         }
-        swap(dp,dp2);
+        dp.swap(dp2);
     }
+    
     return dp2[n];
 }

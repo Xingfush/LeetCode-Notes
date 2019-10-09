@@ -2,24 +2,22 @@
 /* 使用动态规划进行求解：dp[a,b]代表以(a,b)结束的fibo sequence的长度，
 	dp[a,b]= dp[b-a,a]+1 or 2 */
 
-int longestFibSubsequence(vector<int>& nums)
-{
-	// 哈希表用于查找，无可置疑
-	unordered_map<int,int> m;
-	int n = nums.size(), res = 0; 
-	vector<vector<int>> dp(n, vector<int>(n, 0));
-	for(int j=0;j<n;j++)
-	{
-		m[nums[j]] = j; // 永远是 j先行，因此 m[nums[j]] = j 不用单独先赋值
-		for(int i=0;i<j;i++) // i<j 而不是 i<=j, 因此最少有两个元素
-		{
-			// 判断其差是否为数组中的元素，这种是否存在的问题，优先用哈希表
-			int k = m.find(nums[j]-nums[i])==m.end()? -1:m[nums[j]-nums[i]];
-			dp[i][j] = (nums[j]-nums[i]<nums[i] && k>=0) ? dp[k][i]+1:2;
-			res = max(res, dp[i][j]);
-		}
-	}
-	return res>2?res:0;
+int LongestFibonacciSubsequence(const vector<int>& nums){
+    unordered_map<int,int> map;
+    int n = nums.size(), res = 0;
+    vector<vector<int>> dp(n,vector<int>(n,0));
+
+    for(int i=0;i<n;i++){
+        map[nums[i]] = i; // 永远是 i先行，因此 m[nums[i]] = i 不用单独先赋值
+        for(int j=0;j<i;j++){ // j<i 而不是 j<=i, 因此最少有两个元素
+        	// 判断其差是否为数组中的元素，这种是否存在的问题，优先用哈希表
+            int k = (map.find(nums[i]-nums[j])==map.end()?-1:map[nums[i]-nums[j]]);
+            dp[j][i] = (nums[i]-nums[j]<nums[j] && k>=0)?dp[k][j]+1:2;
+            res = max(dp[j][i],res);
+        }
+    }
+
+    return res>2?res:0;
 }
 
 /* 本题思考：

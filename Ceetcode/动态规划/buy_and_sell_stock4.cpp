@@ -1,4 +1,4 @@
-int maxProfit(vector<int> &prices) {
+int MaxProfit(const vector<int> &prices) {
     int buy(INT_MIN), sell(0), prev_sell(0), prev_buy;
     for (int price : prices) {
         prev_buy = buy;

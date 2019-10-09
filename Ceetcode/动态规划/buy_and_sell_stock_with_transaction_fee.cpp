@@ -9,7 +9,7 @@
 	sold[i] = max( sold[i-1], hold[i-1]+prices[i]-fee)
 	hold[i] = max( hold[i-1], sold[i-1]-prices[i]) */
 
-int maxProfit(vector<int>& prices, int fee) {
+int MaxProfit(const vector<int>& prices, int fee) {
     int n = prices.size();
     vector<int> sold(n,0);
     vector<int> hold(n,0);
