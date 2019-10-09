@@ -1,4 +1,5 @@
-/* 一个很常规的题目 */
+/* 一个很常规的题目，其实不如直接用中序遍历 */
+
 TreeNode* getInorderSuccessor(TreeNode* pNode)
 {
 	if(pNode==nullptr)

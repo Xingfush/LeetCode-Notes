@@ -1,19 +1,7 @@
 /* ------------------------------------------------------------------ */
-/* 题目1：判断有没有和为 sum 的路径 */
-
-bool hasPathSum(TreeNode* root, int sum) {
-    if(root==nullptr) 
-        return false;
-    if(root->val==sum && root->left==nullptr && root->right==nullptr) 
-        return true;
-    return hasPathSum(root->left,sum-root->val) || hasPathSum(root->right,sum-root->val);
-}
-
-// 典型的前序遍历
-
-/* ------------------------------------------------------------------ */
 /* 找出所有和为 sum 的路径，标准路径 */
 /* 典型的回溯法 */
+
 vector<vector<int>> pathSum(TreeNode* root, int sum) {
     vector<vector<int> > paths;
     vector<int> path;
@@ -32,8 +20,7 @@ void findPaths(TreeNode* node, int sum, vector<int>& path, vector<vector<int> >&
 }
 
 /* 做个简单的变形，求最大的路径的 sum */
-void findMaxPaths(TreeNode* node, int & curSum, int & maxSum)
-{
+void findMaxPaths(TreeNode* node, int & curSum, int & maxSum){
 	if(!node) return;
 	curSum += node->val;
 	if(!(node->left) && !(node->right) && curSum>maxSum)
@@ -46,8 +33,7 @@ void findMaxPaths(TreeNode* node, int & curSum, int & maxSum)
 /* ------------------------------------------------------------------ */
 /* 双重递归，这个很牛逼，极具启发性 */
 // 找出所有结点和为sum的路径，这个路径不需要是根结点开始，叶子结点结束
-int pathSum(TreeNode* root, int sum)
-{
+int pathSum(TreeNode* root, int sum){
 	if(root==nullptr)
 		return 0;
 	return pathSumFromRoot(root,sum)+pathSum(root->left,sum)
@@ -55,8 +41,7 @@ int pathSum(TreeNode* root, int sum)
 
 }
 
-int pathSumFromRoot(TreeNode* root, int sum)
-{
+int pathSumFromRoot(TreeNode* root, int sum){
 	if(root==nullptr) //这个地方判断不能少
 		return 0;
 	int res = (root->val==sum?1:0); // 这个形式非常简洁，
@@ -69,8 +54,7 @@ int pathSumFromRoot(TreeNode* root, int sum)
 
 /* ------------------------------------------------------------------ */
 // 找出和最大的路径，完全任意路径，从结点到结点
-int MaxToRoot(TreeNode* root, int & re)
-{
+int MaxToRoot(TreeNode* root, int & re){
     if(root==nullptr)
         return 0;
     int left=max(MaxToRoot(root->left,re),0);

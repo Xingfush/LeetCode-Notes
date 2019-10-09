@@ -11,8 +11,8 @@ TreeNode* Convert(TreeNode* root){
 
 }
 
-void ConvertCore(TreeNode* pNode, TreeNode* & pLastNode) // pLastNode 的移动是关键，和SortedListToBST相似
-{
+// pLastNode 的移动是关键，和SortedListToBST相似
+void ConvertCore(TreeNode* pNode, TreeNode* & pLastNode) {
 	if(pNode==nullptr)
 		return; // 直接返回为空
 
