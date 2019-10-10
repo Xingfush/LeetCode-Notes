@@ -40,28 +40,3 @@ Node* mergeKLists(vector<Node*> &lists)
 	return result;
 
 }
-
-// 使用优先队列的另一种解法
-Node *mergeKLists(vector<Node*> &lists)
-{
-	priority_queue<Node*,vector<Node*>,compare> heap;
-	Node* result=new Node(0); // 新建一个空的头结点
-	Node* tail = result;
-	
-	int k =lists.size();
-
-	for(int i=0;i<k;i++)
-		if(lists[i])
-			heap.push(lists[i])
-
-	// tail在不同的LinkList 上来回变
-	while(!heap.empty())
-	{
-		tail->next=heap.top();
-		tail = curNode->next;
-		heap.pop();
-		if(tail->next)
-			heap.push(tail->next);
-	}
-	return result->next;
-}

@@ -19,7 +19,7 @@ TreeNode* DeleteTreeNode(TreeNode* root, int key){
 	// 删除根节点单独处理
 	if(!pre) 
 		return DeleteTreeNodeHelper(root);
-	if(pre->left && pre->left==key) 
+	if(pre->left && pre->left==cur) 
 		pre->left = DeleteTreeNodeHelper(root);
 	else
 		pre->right = DeleteTreeNodeHelper(root);
